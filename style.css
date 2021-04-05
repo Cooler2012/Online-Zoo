@@ -5,7 +5,7 @@ body {
   border: solid whitesmoke;
 }
 
-.header, .header__nav, .header-nav__list, .main, .social .social__list, .slider, .HowItWorks_cart, .HowItWorks_cart .HowItWorks_cart_wrap {
+.header, .header__nav, .header-nav__list, .main, .social .social__list, .slider, .HowItWorks_cart, .HowItWorks_cart .HowItWorks_cart_wrap, .PetsSlider, .PetsSlider .slider_pets, .stepsToPay {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -360,4 +360,366 @@ body {
 .PetsSlider {
   width: 1920px;
   height: auto;
+  flex-direction: column;
+  margin: 150px auto;
+}
+.PetsSlider p {
+  font-size: 48px;
+  font-family: 'Roboto';
+  margin: 0;
+  font-weight: 900;
+}
+.PetsSlider .selectAnimal {
+  margin: 0 0 50px;
+}
+.PetsSlider #chooseAnimal {
+  width: 245px;
+  height: 55px;
+  border: none;
+  border-radius: 5px;
+  background: #4bd8b5;
+  background: linear-gradient(90deg, #4bd8b5 35%, #49d6df 100%);
+}
+.PetsSlider #chooseAnimal p {
+  padding-left: 5px;
+  font-size: 18px;
+  color: white;
+  font-family: 'Roboto';
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.PetsSlider .slider_pets {
+  width: 1100px;
+  height: 421px;
+  margin: 50px auto;
+}
+.PetsSlider .slider_pets div {
+  position: relative;
+  width: 278px;
+  height: 399px;
+}
+.PetsSlider .slider_pets div:hover {
+  transform: scale(1.1);
+  transition: 2s;
+  z-index: 100;
+}
+.PetsSlider .slider_pets div:hover p, .PetsSlider .slider_pets div:hover button {
+  opacity: 1;
+}
+.PetsSlider .slider_pets div .title {
+  opacity: 0;
+  font-family: 'Roboto';
+  font-size: 12px;
+  position: absolute;
+  color: white;
+  top: 50px;
+  left: 10px;
+}
+.PetsSlider .slider_pets div img {
+  width: 278px;
+  height: 399px;
+  object-fit: cover;
+  border-radius: 15%;
+}
+.PetsSlider .slider_pets div button {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 113px;
+  height: 24px;
+  border: none;
+  opacity: 0;
+  background: inherit;
+  position: absolute;
+  top: 160px;
+  left: 5px;
+  text-transform: uppercase;
+}
+.PetsSlider .slider_pets div button .nameBut {
+  color: #4bd8b5;
+  font-family: 'Roboto';
+  font-size: 9px;
+}
+.PetsSlider .slider_pets div button .imgBut {
+  width: 25px;
+  height: 25px;
+}
+
+#chooseAnimal:hover {
+  background: linear-gradient(90deg, #cf4bd8 35%, #4963df 100%);
+  cursor: pointer;
+}
+
+#chooseAnimal:active {
+  background: yellowgreen;
+}
+
+.stepsToPay {
+  width: 1920px;
+  height: auto;
+  background: #F2F2F2;
+  flex-direction: column;
+  position: relative;
+}
+.stepsToPay .stepsToPay_title {
+  margin-top: 80px;
+  font-size: 48px;
+  font-family: 'Roboto';
+  font-weight: 900;
+}
+.stepsToPay .stepsToPay_info {
+  font-size: 14px;
+  font-family: 'Roboto';
+  font-weight: 400;
+}
+.stepsToPay .steps {
+  margin: 60px auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.stepsToPay .steps .step {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 245px;
+  height: 245px;
+  border: 1px solid #4bd8b5;
+  border-radius: 50%;
+}
+.stepsToPay .steps .step h3 {
+  margin: 15px auto;
+  color: #4F4F4F;
+  font-family: 'Roboto';
+  font-size: 20px;
+  line-height: 23.44px;
+  font-weight: 900;
+}
+.stepsToPay .arrow1 {
+  width: 107px;
+  height: auto;
+  position: absolute;
+  top: 410px;
+  left: 642px;
+}
+.stepsToPay .arrow2 {
+  width: 107px;
+  height: auto;
+  position: absolute;
+  top: 410px;
+  left: 1185px;
+}
+.stepsToPay #donate {
+  margin-bottom: 80px;
+  width: 245px;
+  height: 55px;
+  border: none;
+  border-radius: 5px;
+  background: #4bd8b5;
+  background: linear-gradient(90deg, #4bd8b5 35%, #49d6df 100%);
+}
+.stepsToPay #donate p {
+  padding-left: 5px;
+  font-size: 18px;
+  color: white;
+  font-family: 'Roboto';
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+#donate:hover {
+  background: linear-gradient(90deg, #cf4bd8 35%, #4963df 100%);
+  cursor: pointer;
+}
+
+#donate:active {
+  background: yellowgreen;
+}
+
+.coments {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+.coments .coments__title {
+  margin-top: 80px;
+  font-size: 48px;
+  font-family: 'Roboto';
+  font-weight: 900;
+}
+.coments .coments__slider {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 30px auto;
+}
+.coments .coments__slider div {
+  margin: 15px;
+}
+.coments .coments__slider .feed {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 585px;
+  min-height: 310px;
+  box-shadow: 1px 1px 20px 0px grey;
+}
+.coments .coments__slider .feed .feed__avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+}
+.coments .coments__slider .feed .feed__name {
+  font-family: 'Roboto';
+  font-size: 20px;
+  font-weight: 900;
+}
+.coments .coments__slider .feed .feed__text {
+  font-family: 'Roboto';
+  font-size: 14px;
+  font-weight: 400;
+  padding: 20px;
+}
+.coments #InRange {
+  margin: 15px;
+}
+.coments #leaveFeedback {
+  margin: 20px;
+  width: 245px;
+  height: 55px;
+  border: none;
+  border-radius: 5px;
+  background: #4bd8b5;
+  background: linear-gradient(90deg, #4bd8b5 35%, #49d6df 100%);
+}
+.coments #leaveFeedback p {
+  padding-left: 5px;
+  font-size: 18px;
+  color: white;
+  font-family: 'Roboto';
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+#leaveFeedback:hover {
+  background: linear-gradient(90deg, #cf4bd8 35%, #4963df 100%);
+  cursor: pointer;
+}
+
+#leaveFeedback:active {
+  background: yellowgreen;
+}
+
+.Map {
+  margin: 80px auto;
+  width: 1920px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  background: #F2F2F2;
+  position: relative;
+}
+.Map #LocEagle {
+  position: absolute;
+  top: 307px;
+  left: 501px;
+}
+.Map #LocCroc {
+  position: absolute;
+  top: 332px;
+  left: 616px;
+}
+.Map #LocGarilla {
+  position: absolute;
+  top: 419px;
+  left: 944px;
+}
+.Map #LocPanda {
+  position: absolute;
+  top: 325px;
+  left: 1264px;
+}
+.Map .Map__title {
+  margin-top: 80px;
+  font-size: 48px;
+  font-family: 'Roboto';
+  font-weight: 900;
+}
+.Map #mapBackgr {
+  width: 1200px;
+  height: 498px;
+  margin: 35px 0;
+}
+.Map #mapButt {
+  margin: 20px auto 80px;
+  width: 245px;
+  height: 55px;
+  border: none;
+  border-radius: 5px;
+  background: #4bd8b5;
+  background: linear-gradient(90deg, #4bd8b5 35%, #49d6df 100%);
+}
+.Map #mapButt p {
+  padding-left: 5px;
+  font-size: 18px;
+  color: white;
+  font-family: 'Roboto';
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.Map .MapAnimal__info {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 436px;
+  height: auto;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 1px 1px 20px 0 grey;
+  position: absolute;
+  top: 385px;
+  left: 80px;
+}
+.Map .MapAnimal__info .animalAv {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+}
+.Map .MapAnimal__info .animName {
+  font-family: 'Roboto';
+  font-size: 18px;
+  font-weight: 900;
+}
+.Map .MapAnimal__info .animalRegion, .Map .MapAnimal__info .animalPopulation {
+  font-family: 'Roboto';
+  font-size: 14;
+  font-weight: 400;
+}
+.Map .ImWrap {
+  position: relative;
+}
+.Map .ImWrap .mainImg {
+  position: absolute;
+  top: -10px;
+  left: -12px;
+}
+
+#mapButt:hover {
+  background: linear-gradient(90deg, #cf4bd8 35%, #4963df 100%);
+  cursor: pointer;
+}
+
+#mapButt:active {
+  background: yellowgreen;
 }
