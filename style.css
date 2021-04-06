@@ -269,6 +269,22 @@ body {
   height: 25px;
 }
 
+#sliderTopBlock {
+  margin: 0 0 40px;
+  display: block;
+  appearance: none;
+  height: 5px;
+  background-color: rgba(189, 189, 189, 0.57);
+  margin-top: 14px;
+  outline: none;
+  transition: 0.3s;
+  cursor: pointer;
+  width: 245px;
+  position: absolute;
+  top: 825px;
+  right: 530px;
+}
+
 .HowItWorks {
   max-width: 1920px;
   height: 1296px;
@@ -291,13 +307,22 @@ body {
   text-align: left;
 }
 .HowItWorks .HowItWorks__show .slider__howItWorks {
-  margin-top: 15px;
+  margin: 15px 0 30px;
   width: 790px;
   height: 323px;
   object-fit: cover;
 }
 .HowItWorks .HowItWorks__show input {
   margin-top: 40px;
+  display: block;
+  appearance: none;
+  height: 5px;
+  background-color: rgba(189, 189, 189, 0.57);
+  margin-top: 14px;
+  outline: none;
+  transition: 0.3s;
+  cursor: pointer;
+  width: 245px;
 }
 .HowItWorks .HowItWorks__show button {
   margin-top: 35px;
@@ -370,7 +395,16 @@ body {
   font-weight: 900;
 }
 .PetsSlider .selectAnimal {
-  margin: 0 0 50px;
+  margin: 0 0 40px;
+  display: block;
+  appearance: none;
+  height: 5px;
+  background-color: rgba(189, 189, 189, 0.57);
+  margin-top: 14px;
+  outline: none;
+  transition: 0.3s;
+  cursor: pointer;
+  width: 245px;
 }
 .PetsSlider #chooseAnimal {
   width: 245px;
@@ -592,6 +626,17 @@ body {
 }
 .coments #InRange {
   margin: 15px;
+  display: block;
+  appearance: none;
+  height: 5px;
+  background-color: rgba(189, 189, 189, 0.57);
+  margin-top: 14px;
+  outline: none;
+  transition: 0.3s;
+  cursor: pointer;
+  width: 245px;
+  top: 825px;
+  right: 530px;
 }
 .coments #leaveFeedback {
   margin: 20px;

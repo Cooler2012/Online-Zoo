@@ -274,6 +274,21 @@ body {
         }
     }
 }
+#sliderTopBlock {
+    margin: 0 0 40px;
+    display: block;
+    appearance: none;
+    height: 5px;
+    background-color: rgba(189, 189, 189, 0.57);
+    margin-top: 14px;
+    outline: none;
+    transition: 0.3s;
+    cursor: pointer;
+    width: 245px;
+    position: absolute;
+    top: 825px;
+    right: 530px;
+}
 
 
 //                                 How it works    section
@@ -297,13 +312,22 @@ body {
             text-align: left;
         }
         .slider__howItWorks {
-            margin-top: 15px;
+            margin: 15px 0 30px;
             width: 790px;
             height: 323px;
             object-fit: cover;
         }
         input {
             margin-top: 40px;
+            display: block;
+            appearance: none;
+            height: 5px;
+            background-color: rgba(189, 189, 189, 0.57);
+            margin-top: 14px;
+            outline: none;
+            transition: 0.3s;
+            cursor: pointer;
+            width: 245px;
         }
         button {
             margin-top: 35px;
@@ -381,7 +405,16 @@ body {
         font-weight: 900;
     }
     .selectAnimal {
-        margin: 0 0 50px;
+        margin: 0 0 40px;
+        display: block;
+        appearance: none;
+        height: 5px;
+        background-color: rgba(189, 189, 189, 0.57);
+        margin-top: 14px;
+        outline: none;
+        transition: 0.3s;
+        cursor: pointer;
+        width: 245px;
     }
     #chooseAnimal {
         width: 245px;
@@ -611,6 +644,18 @@ body {
     }
     #InRange {
         margin: 15px;
+        // margin: 0 0 40px;
+        display: block;
+        appearance: none;
+        height: 5px;
+        background-color: rgba(189, 189, 189, 0.57);
+        margin-top: 14px;
+        outline: none;
+        transition: 0.3s;
+        cursor: pointer;
+        width: 245px;
+        top: 825px;
+        right: 530px;
     }
     #leaveFeedback {
         margin: 20px;
