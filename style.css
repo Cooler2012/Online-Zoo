@@ -28,6 +28,15 @@ body {
   box-shadow: 1px 5px 5px #49d6df;
 }
 
+#prosba {
+  color: #FFFFFF;
+  font-size: 25px;
+  font-family: 'Roboto';
+  position: absolute;
+  top: 287px;
+  left: 188px;
+}
+
 .logo {
   width: 59px;
   height: 42px;
