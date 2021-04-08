@@ -1,14 +1,22 @@
 body {
   margin: 0 auto;
   padding: 0;
-  width: 1920px;
+  width: 100%;
   border: solid whitesmoke;
+  display: flex;
+  justify-content: center;
 }
 
 .header, .header__nav, .header-nav__list, .main, .social .social__list, .slider, .HowItWorks_cart, .HowItWorks_cart .HowItWorks_cart_wrap, .PetsSlider, .PetsSlider .slider_pets, .stepsToPay, .footer .foot-wrap-first .InfoAboutUs .FooterNavi, .footer .foot-wrap-first .InfoAboutUs .FooterNavi .footer-nav__list {
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+
+.wrapp {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0;
 }
 
 .header {
@@ -26,15 +34,6 @@ body {
 .header__logo:hover {
   transition: 2s;
   box-shadow: 1px 5px 5px #49d6df;
-}
-
-#prosba {
-  color: #FFFFFF;
-  font-size: 25px;
-  font-family: 'Roboto';
-  position: absolute;
-  top: 287px;
-  left: 188px;
 }
 
 .logo {
@@ -118,7 +117,6 @@ body {
 .main {
   flex-direction: column;
   width: 1920px;
-  height: 100%;
 }
 
 .animalSelection {
@@ -268,12 +266,23 @@ body {
   left: 5px;
   text-transform: uppercase;
 }
-.slider div button #nameBut {
+.slider div button a {
+  margin: 0 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slider div button a #nameBut {
   color: #4bd8b5;
   font-family: 'Roboto';
-  font-size: 9px;
+  font-size: 5px;
 }
-.slider div button .imgBut {
+.slider div button a #nameButDonate {
+  color: #F2F2F2;
+  font-family: 'Roboto';
+  font-size: 5px;
+}
+.slider div button a .imgBut {
   width: 25px;
   height: 25px;
 }
@@ -423,7 +432,10 @@ body {
   background: #4bd8b5;
   background: linear-gradient(90deg, #4bd8b5 35%, #49d6df 100%);
 }
-.PetsSlider #chooseAnimal p {
+.PetsSlider #chooseAnimal a {
+  text-decoration: none;
+}
+.PetsSlider #chooseAnimal a p {
   padding-left: 5px;
   font-size: 18px;
   color: white;
@@ -440,6 +452,7 @@ body {
   position: relative;
   width: 278px;
   height: 399px;
+  margin: 0 20px;
 }
 .PetsSlider .slider_pets div:hover {
   transform: scale(1.1);
@@ -455,7 +468,7 @@ body {
   font-size: 12px;
   position: absolute;
   color: white;
-  top: 50px;
+  top: 220px;
   left: 10px;
 }
 .PetsSlider .slider_pets div img {
@@ -469,24 +482,57 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 113px;
+  width: 260px;
   height: 24px;
   border: none;
   opacity: 0;
   background: inherit;
   position: absolute;
-  top: 160px;
+  top: 315px;
   left: 5px;
   text-transform: uppercase;
 }
-.PetsSlider .slider_pets div button .nameBut {
+.PetsSlider .slider_pets div button a {
+  margin: 0 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.PetsSlider .slider_pets div button a #nameBut {
   color: #4bd8b5;
   font-family: 'Roboto';
-  font-size: 9px;
+  font-size: 15px;
 }
-.PetsSlider .slider_pets div button .imgBut {
+.PetsSlider .slider_pets div button a #nameButDonate {
+  color: #F2F2F2;
+  font-family: 'Roboto';
+  font-size: 15px;
+}
+.PetsSlider .slider_pets div button a .imgBut {
   width: 25px;
   height: 25px;
+}
+
+.prewArrow, .nextArrow {
+  margin: 0 10px;
+  display: flex;
+  align-items: center;
+}
+.prewArrow:hover, .nextArrow:hover {
+  width: 30px;
+}
+
+#arrow {
+  width: 35px;
+  height: 30px;
+}
+
+#arrows {
+  width: 20px;
+  height: 30px;
+}
+#arrows:hover {
+  background: yellowgreen;
 }
 
 #chooseAnimal:hover {
@@ -723,7 +769,10 @@ body {
   background: #4bd8b5;
   background: linear-gradient(90deg, #4bd8b5 35%, #49d6df 100%);
 }
-.Map #mapButt p {
+.Map #mapButt a {
+  text-decoration: none;
+}
+.Map #mapButt a p {
   padding-left: 5px;
   font-size: 18px;
   color: white;
@@ -756,7 +805,7 @@ body {
 }
 .Map .MapAnimal__info .animalRegion, .Map .MapAnimal__info .animalPopulation {
   font-family: 'Roboto';
-  font-size: 14;
+  font-size: 14px;
   font-weight: 400;
 }
 .Map .ImWrap {
@@ -766,6 +815,9 @@ body {
   position: absolute;
   top: -10px;
   left: -12px;
+}
+.Map .ImWrap .mainImg:hover {
+  fill: #EB5757;
 }
 
 #mapButt:hover {
@@ -979,4 +1031,16 @@ body {
 
 #donateVol:active {
   background: yellowgreen;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: 0.4px solid #000000;
+  height: 20px;
+  width: 36px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+  box-shadow: 0.1px 0.1px 1px #000000, 0px 0px 1px #0d0d0d;
+  /* Add cool effects to your sliders! */
 }

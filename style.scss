@@ -1,14 +1,21 @@
 body {
     margin: 0 auto;
     padding: 0;
-    width: 1920px;
+    width: 100%;
     border: solid whitesmoke;
+    display: flex;
+    justify-content: center;
 }
 
 %align {
     display: flex;
     justify-content: space-around;
     align-items: center;
+}
+.wrapp {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0;
 }
 //                         header
 .header {
@@ -28,18 +35,6 @@ body {
         box-shadow: 1px 5px 5px rgba(73,214,223,1);
     }
 }
-
-#prosba {
-    color: #FFFFFF;
-    font-size: 25px;
-    font-family: 'Roboto';
-    position: absolute;
-    top: 287px;
-    left: 188px;
-}
-
-
-
 
 
 .logo {
@@ -127,7 +122,6 @@ body {
     @extend %align;
     flex-direction: column;
     width: 1920px;
-    height: 100%;
 }
 
 //                      First section
@@ -275,14 +269,25 @@ body {
             top: 160px;
             left: 5px;
             text-transform: uppercase;
-            #nameBut {
-                color: rgb(75,216,181);
-                font-family: 'Roboto';
-                font-size: 9px;
-            }
-            .imgBut {
-                width: 25px;
-                height: 25px;
+            a {
+                margin: 0 2px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                #nameBut {
+                    color: rgb(75,216,181);
+                    font-family: 'Roboto';
+                    font-size: 5px;
+                }
+                #nameButDonate {
+                    color: #F2F2F2;
+                    font-family: 'Roboto';
+                    font-size: 5px;
+                }
+                .imgBut {
+                    width: 25px;
+                    height: 25px;
+                }
             }
         }
     }
@@ -436,13 +441,16 @@ body {
         border-radius: 5px;
         background: rgb(75,216,181);
         background: linear-gradient(90deg, rgba(75,216,181,1) 35%, rgba(73,214,223,1) 100%);
-        p {
-            padding-left: 5px;
-            font-size: 18px;
-            color: white;
-            font-family: 'Roboto';
-            font-weight: 900;
-            text-transform: uppercase;
+        a {
+            text-decoration: none;
+            p {
+                padding-left: 5px;
+                font-size: 18px;
+                color: white;
+                font-family: 'Roboto';
+                font-weight: 900;
+                text-transform: uppercase;
+            }
         }
     }
     .slider_pets {
@@ -454,6 +462,7 @@ body {
             position: relative;
             width: 278px;
             height: 399px;
+            margin: 0 20px;
             // z-index: 10;
             &:hover {
                 transform: scale(1.1);
@@ -469,7 +478,7 @@ body {
                 font-size: 12px;
                 position: absolute;
                 color: white;
-                top: 50px;
+                top: 220px;
                 left: 10px;
             }
             img {
@@ -483,26 +492,57 @@ body {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                width: 113px;
+                width: 260px;
                 height: 24px;
                 border: none;
                 opacity: 0;
                 background: inherit;
                 position: absolute;
-                top: 160px;
+                top: 315px;
                 left: 5px;
                 text-transform: uppercase;
-                .nameBut {
-                    color: rgb(75,216,181);
-                    font-family: 'Roboto';
-                    font-size: 9px;
-                }
-                .imgBut {
-                    width: 25px;
-                    height: 25px;
+                a {
+                    margin: 0 2px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    #nameBut {
+                        color: rgb(75,216,181);
+                        font-family: 'Roboto';
+                        font-size: 15px;
+                    }
+                    #nameButDonate {
+                        color: #F2F2F2;
+                        font-family: 'Roboto';
+                        font-size: 15px;
+                    }
+                    .imgBut {
+                        width: 25px;
+                        height: 25px;
+                    }
                 }
             }
         }
+    }
+}
+
+.prewArrow, .nextArrow {
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+    &:hover {
+        width: 30px;
+    }
+}
+#arrow {
+    width: 35px;
+    height: 30px;
+}
+#arrows {
+    width: 20px;
+    height: 30px;
+    &:hover {
+        background: yellowgreen;
     }
 }
 
@@ -710,7 +750,7 @@ body {
     #LocEagle {
         position: absolute;
         top:307px;
-        left: 501px;
+        left: 501px;    
     }
     #LocCroc {
         position: absolute;
@@ -746,13 +786,16 @@ body {
         border-radius: 5px;
         background: rgb(75,216,181);
         background: linear-gradient(90deg, rgba(75,216,181,1) 35%, rgba(73,214,223,1) 100%);
-        p {
-            padding-left: 5px;
-            font-size: 18px;
-            color: white;
-            font-family: 'Roboto';
-            font-weight: 900;
-            text-transform: uppercase;
+        a {
+            text-decoration: none;
+            p {
+                padding-left: 5px;
+                font-size: 18px;
+                color: white;
+                font-family: 'Roboto';
+                font-weight: 900;
+                text-transform: uppercase;
+            }
         }
     }
     .MapAnimal__info {
@@ -781,7 +824,7 @@ body {
         }
         .animalRegion, .animalPopulation {
             font-family: 'Roboto';
-            font-size: 14;
+            font-size: 14px;
             font-weight: 400;
         }
     }
@@ -791,9 +834,13 @@ body {
             position: absolute;
             top: -10px;
             left: -12px;
+            &:hover {
+                fill: #EB5757;                
+            }
         }
     }
 }
+
 
 #mapButt:hover {
     background: linear-gradient(90deg, rgba(207,75,216,1) 35%, rgba(73,99,223,1) 100%);
@@ -1022,3 +1069,13 @@ body {
 #donateVol:active {
     background: yellowgreen;
 }
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: 0.4px solid #000000;
+    height: 20px;
+    width: 36px;
+    border-radius: 3px;
+    background: #ffffff;
+    cursor: pointer;
+    box-shadow: 0.1px 0.1px 1px #000000, 0px 0px 1px #0d0d0d; /* Add cool effects to your sliders! */
+  }
