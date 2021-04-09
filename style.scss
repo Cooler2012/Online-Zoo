@@ -465,11 +465,13 @@ body {
             margin: 0 20px;
             // z-index: 10;
             &:hover {
+                // transition: all 0.3s linear;
                 transform: scale(1.1);
                 transition: 2s;
                 z-index: 100;
                 p, button {
                     opacity: 1;
+                    transition: all 1.5s linear;
                 }
             }
             .title {
@@ -1092,4 +1094,8 @@ input[type=range]::-webkit-slider-thumb {
       position: absolute;
       top: 760px;
       right: 600px;
+  }
+
+  h1 {
+      visibility: hidden;
   }

@@ -115,9 +115,15 @@ body {
   margin: 5px;
   transform: rotate(90deg);
 }
+.arrows:hover {
+  background: yellowgreen;
+}
 
 .arrow {
   transform: rotate(90deg);
+}
+.arrow:hover {
+  background: yellowgreen;
 }
 
 .slider__items {
@@ -196,6 +202,35 @@ main .main .main__info .infoBlock .inform {
   font-size: 14px;
   font-weight: 400;
   align-self: flex-start;
+}
+main .main .main__info .infoBlock button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+  width: 245px;
+  height: 55px;
+  border: none;
+  border-radius: 5px;
+  background: #4bd8b5;
+  background: linear-gradient(90deg, #4bd8b5 35%, #49d6df 100%);
+}
+main .main .main__info .infoBlock button p {
+  padding-left: 5px;
+  font-size: 18px;
+  color: white;
+  font-family: 'Roboto';
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+#FirstScreen__button:hover {
+  background: linear-gradient(90deg, #cf4bd8 35%, #4963df 100%);
+  cursor: pointer;
+}
+
+#FirstScreen__button:active {
+  background: yellowgreen;
 }
 
 .footer {
@@ -401,4 +436,20 @@ main .main .main__info .infoBlock .inform {
 
 #donateVol:active {
   background: yellowgreen;
+}
+
+#Inst:hover {
+  background: linear-gradient(335deg, #d8d44b 35%, #b549df 78%);
+}
+
+#Twit:hover {
+  background: #00acee;
+}
+
+#Youtube:hover {
+  background: red;
+}
+
+#VK:hover {
+  background: #597da3;
 }

@@ -461,6 +461,7 @@ body {
 }
 .PetsSlider .slider_pets div:hover p, .PetsSlider .slider_pets div:hover button {
   opacity: 1;
+  transition: all 1.5s linear;
 }
 .PetsSlider .slider_pets div .title {
   opacity: 0;
@@ -1057,4 +1058,8 @@ label {
   position: absolute;
   top: 760px;
   right: 600px;
+}
+
+h1 {
+  visibility: hidden;
 }

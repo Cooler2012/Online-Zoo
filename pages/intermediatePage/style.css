@@ -77,6 +77,22 @@ body {
   text-decoration: underline;
 }
 
+#Inst:hover {
+  background: linear-gradient(335deg, #d8d44b 35%, #b549df 78%);
+}
+
+#Twit:hover {
+  background: #00acee;
+}
+
+#Youtube:hover {
+  background: red;
+}
+
+#VK:hover {
+  background: #597da3;
+}
+
 .changeTheme {
   color: white;
   height: 100%;
@@ -142,6 +158,10 @@ body {
   width: 20px;
   height: 35px;
   margin: 5px;
+}
+
+.arrows:hover, .arrow:hover {
+background: yellowgreen;
 }
 
 .slider__items {
@@ -304,7 +324,6 @@ body {
 #mapButt:active {
   background: yellowgreen;
 }
-
 
 
 
@@ -516,32 +535,41 @@ body {
   background: yellowgreen;
 }
 
+h1 {
+  visibility: hidden;
+}
 
 
 
+.selectAnimal {
+  margin: 0 0 15px;
+  display: block;
+  appearance: none;
+  height: 5px;
+  background-color: rgba(189, 189, 189, 0.57);
+  margin-top: 14px;
+  outline: none;
+  transition: 0.3s;
+  cursor: pointer;
+  width: 245px;
+}
 
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: 0.4px solid #000000;
+  height: 20px;
+  width: 36px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+  box-shadow: 0.1px 0.1px 1px #000000, 0px 0px 1px #0d0d0d;
+  /* Add cool effects to your sliders! */
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+label {
+  color: grey;
+  font-size: 48px;
+  font-family: 'Roboto';
+  font-weight: 900;
+  margin: 10px;
+}
