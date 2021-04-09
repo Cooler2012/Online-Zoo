@@ -1079,3 +1079,17 @@ input[type=range]::-webkit-slider-thumb {
     cursor: pointer;
     box-shadow: 0.1px 0.1px 1px #000000, 0px 0px 1px #0d0d0d; /* Add cool effects to your sliders! */
   }
+
+  label {
+      color: grey;
+      font-size: 48px;
+      font-family: 'Roboto';
+      font-weight: 900;
+      margin: 10px;
+  }
+
+  #rangeTop {
+      position: absolute;
+      top: 760px;
+      right: 600px;
+  }
