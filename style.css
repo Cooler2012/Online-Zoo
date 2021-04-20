@@ -417,8 +417,8 @@ body {
 
   .WatchingAnimal__title {
     width: 85%;
-    top: 13%;
-    left: 12%;
+    top: 13.5%;
+    left: 12.5%;
   }
   .WatchingAnimal__title #FirstScreen__button {
     margin-top: 35px;
@@ -1346,8 +1346,11 @@ body {
     justify-content: start;
     padding: 22px 7px 0;
   }
+  .coments .coments__slider .feed .feed__avatar {
+    margin-top: 44px;
+  }
   .coments .coments__slider .feed h3 {
-    margin: 0 0 17px;
+    margin: 0;
   }
   .coments .coments__slider .feed p {
     margin: 0;
@@ -1554,7 +1557,7 @@ body {
   .Map .MapAnimal__info {
     position: absolute;
     top: 55%;
-    left: 4%;
+    right: 4%;
   }
 }
 @media (max-width: 640px) {
@@ -1914,9 +1917,15 @@ body {
     font-size: 16px;
   }
   .footer .InfoAboutUs {
-    position: relative;
     padding: 0;
   }
+}
+@media (max-width: 1200px) and (min-width: 641px) {
+  .footer .InfoAboutUs {
+    position: relative;
+  }
+}
+@media (max-width: 1200px) {
   .footer .InfoAboutUs .FooterNavi .footer-nav__list {
     margin-top: 20px;
   }
@@ -1924,8 +1933,8 @@ body {
     width: 99%;
     max-width: 276px;
     position: absolute;
-    top: 65%;
-    left: 5%;
+    top: 68%;
+    left: 2%;
   }
   .footer .InfoAboutUs .infoAboutZoo {
     margin: 42px 0 0 8px;
@@ -1943,14 +1952,19 @@ body {
     padding: 6px;
   }
   .footer .foot-wrap-sec {
-    align-self: start;
+    align-self: center;
     margin-top: 40px;
-    padding: 20px 145px;
-    width: 100%;
+    width: 75%;
   }
   .footer .foot-wrap-sec p {
     font-size: 12px;
     margin: 5px;
+  }
+  .footer .foot-wrap-sec #NameAuthor {
+    margin: 33px 0 0 0;
+  }
+  .footer .foot-wrap-sec #ForRSSchool {
+    margin-bottom: 50px;
   }
 }
 @media (max-width: 640px) {
@@ -1959,6 +1973,7 @@ body {
     align-items: flex-start;
   }
   .footer .foot-wrap-first {
+    position: relative;
     flex-direction: column;
   }
   .footer .foot-wrap-first .ContactsForm {
@@ -1972,8 +1987,8 @@ body {
   }
   .footer .foot-wrap-first .InfoAboutUs .FooterNavi {
     position: absolute;
-    top: -209%;
-    left: -51%;
+    top: 12%;
+    left: -11%;
   }
   .footer .foot-wrap-first .InfoAboutUs .FooterNavi .footer-nav__list {
     flex-direction: column;
@@ -1985,8 +2000,8 @@ body {
   .footer .foot-wrap-first .InfoAboutUs .FooterNavi .footer-nav__list #donateVol {
     width: 185%;
     position: absolute;
-    top: -10%;
-    left: 295%;
+    top: -230%;
+    left: 250%;
   }
   .footer .foot-wrap-first .InfoAboutUs .infoAboutZoo {
     margin: 50px 0 0 2px;
@@ -1994,6 +2009,44 @@ body {
   .footer .foot-wrap-sec {
     margin-top: 60px;
     padding: 20px 0;
+  }
+}
+@media (max-width: 620px) {
+  .footer .foot-wrap-first .InfoAboutUs .FooterNavi .footer-nav__list #donateVol {
+    width: 185%;
+    position: absolute;
+    top: -230%;
+    left: 200%;
+  }
+}
+@media (max-width: 560px) {
+  .footer .foot-wrap-first .InfoAboutUs .FooterNavi .footer-nav__list #donateVol {
+    width: 185%;
+    position: absolute;
+    top: -230%;
+    left: 150%;
+  }
+}
+@media (max-width: 490px) {
+  .footer .foot-wrap-first .InfoAboutUs .FooterNavi .footer-nav__list #donateVol {
+    width: 185%;
+    position: absolute;
+    top: -230%;
+    left: 100%;
+  }
+}
+@media (max-width: 420px) {
+  .footer .foot-wrap-first .ContactsForm #sendForm {
+    margin: -10px 0 0 150px;
+  }
+  .footer .foot-wrap-first .InfoAboutUs .FooterNavi .footer-nav__list #donateVol {
+    width: 100%;
+    position: absolute;
+    top: -230%;
+    left: 100%;
+  }
+  .footer .foot-wrap-first .InfoAboutUs .FooterNavi .footer-nav__list #donateVol p {
+    margin: 0;
   }
 }
 @media (max-width: 320px) {
@@ -2019,13 +2072,14 @@ body {
     width: 70%;
   }
   .footer .foot-wrap-first .InfoAboutUs .FooterNavi {
-    top: -192%;
-    left: -23%;
+    top: 14%;
+    left: -17%;
   }
   .footer .foot-wrap-first .InfoAboutUs .FooterNavi .footer-nav__list li {
     margin: 4px 0 0;
   }
   .footer .foot-wrap-first .InfoAboutUs .FooterNavi .footer-nav__list #donateVol {
+    width: 185%;
     top: 1705%;
     left: 42%;
   }

@@ -406,8 +406,8 @@ body {
     }
     .WatchingAnimal__title {
         width: 85%;
-        top: 13%;
-        left: 12%;
+        top: 13.5%;
+        left: 12.5%;
         #FirstScreen__button {
             margin-top: 35px;
         }
@@ -1337,10 +1337,13 @@ body {
             .feed {
                 width: 37%;
                 height: 310px;
+                .feed__avatar {
+                    margin-top: 44px;
+                }
                 justify-content: start;
                 padding: 22px 7px 0;
                 h3 {
-                    margin: 0 0 17px;
+                    margin: 0;
                 }
                 p {
                     margin: 0;
@@ -1566,7 +1569,7 @@ body {
         .MapAnimal__info {
             position: absolute;
             top: 55%;
-            left: 4%;
+            right: 4%;
         }
     }
 }
@@ -1894,10 +1897,6 @@ body {
     .foot-wrap-sec {
         border-top: 1px solid #FFFFFF;
         height: 20%;
-        // display: flex;
-        // justify-content: left;
-        // align-items: center;
-        // flex-direction: column;
     }
 }
 
@@ -1930,7 +1929,6 @@ body {
                     height: 120px;
                 }
                 .check {
-                    // padding: 7px 0 0 0;
                     #ChecPersData {
                         width: 13px;
                         height: 13px;
@@ -1950,7 +1948,9 @@ body {
             }
         }
         .InfoAboutUs {
-            position: relative;
+            @media (min-width: 641px) {
+                position: relative;
+            }
             padding: 0;
             .FooterNavi {
                 .footer-nav__list {
@@ -1959,8 +1959,8 @@ body {
                         width: 99%;
                         max-width: 276px;
                         position: absolute;
-                        top: 65%;
-                        left: 5%;
+                        top: 68%;
+                        left: 2%;
                     }
                 }
             }
@@ -1981,13 +1981,19 @@ body {
             }
         }
         .foot-wrap-sec {
-            align-self: start;
+            align-self: center;
             margin-top: 40px;
-            padding: 20px 145px;
-            width: 100%;
+            // padding: 20px 0 0 145px;
+            width: 75%;
             p {
                 font-size: 12px;
                 margin: 5px;
+            }
+            #NameAuthor {
+                margin: 33px 0 0 0;
+            }
+            #ForRSSchool {
+                margin-bottom: 50px;
             }
         }
     }
@@ -1998,6 +2004,7 @@ body {
         padding: 100px 0 0 19px;
         align-items: flex-start;
         .foot-wrap-first {
+            position: relative;
             flex-direction: column;
             .ContactsForm {
                 width: 83%;
@@ -2011,8 +2018,8 @@ body {
             .InfoAboutUs {
                 .FooterNavi {
                     position: absolute;
-                    top: -209%;
-                    left: -51%;
+                    top: 12%;
+                    left: -11%;
                     .footer-nav__list {
                         flex-direction: column;
                         width: 150px;
@@ -2022,8 +2029,8 @@ body {
                         #donateVol {
                             width: 185%;
                             position: absolute;
-                            top: -10%;
-                            left: 295%;
+                            top: -230%;
+                            left: 250%;
                         }
                     }
                 }
@@ -2039,6 +2046,89 @@ body {
         }
     }
 }
+@media (max-width: 620px) {
+    .footer {
+        .foot-wrap-first {
+            .InfoAboutUs {
+                .FooterNavi {
+                    .footer-nav__list {
+                        #donateVol {
+                            width: 185%;
+                            position: absolute;
+                            top: -230%;
+                            left: 200%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 560px) {
+    .footer {
+        .foot-wrap-first {
+            .InfoAboutUs {
+                .FooterNavi {
+                    .footer-nav__list {
+                        #donateVol {
+                            width: 185%;
+                            position: absolute;
+                            top: -230%;
+                            left: 150%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 490px) {
+    .footer {
+        .foot-wrap-first {
+            .InfoAboutUs {
+                .FooterNavi {
+                    .footer-nav__list {
+                        #donateVol {
+                            width: 185%;
+                            position: absolute;
+                            top: -230%;
+                            left: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 420px) {
+    .footer {
+        .foot-wrap-first {
+            .ContactsForm {
+                #sendForm {
+                    margin: -10px 0 0 150px;
+                }
+            }
+            .InfoAboutUs {
+                .FooterNavi {
+                    .footer-nav__list {
+                        #donateVol {
+                            width: 100%;
+                            position: absolute;
+                            top: -230%;
+                            left: 100%;
+                            p {
+                                margin: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 
 @media (max-width: 320px) {
     .footer {
@@ -2060,13 +2150,14 @@ body {
             .InfoAboutUs {
                 width: 70%;
                 .FooterNavi {
-                    top: -192%;
-                    left: -23%;
+                    top: 14%;
+                    left: -17%;
                     .footer-nav__list {
                         li {
                             margin: 4px 0 0;
                         }
                         #donateVol {
+                            width: 185%;
                             top: 1705%;
                             left: 42%;
                         }
