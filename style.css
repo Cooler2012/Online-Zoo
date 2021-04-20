@@ -176,6 +176,11 @@ body {
     width: 33px;
   }
 }
+@media (max-width: 320px) {
+  .header .changeTheme {
+    right: 23%;
+  }
+}
 .main {
   margin: 0 auto;
   flex-direction: column;
@@ -490,6 +495,52 @@ body {
     font-size: 52px;
   }
 }
+@media (max-width: 320px) {
+  .animalSelection {
+    height: auto;
+    min-height: 669px;
+  }
+  .animalSelection .social {
+    display: none;
+  }
+  .animalSelection .WatchingAnimal .WatchingAnimal__title {
+    font-size: 48px;
+    line-height: 56.25px;
+    top: 14%;
+    width: 92%;
+  }
+  .animalSelection .WatchingAnimal .WatchingAnimal__title #FirstScreen__button {
+    margin: 15px 0 0 0;
+  }
+  .animalSelection .slider {
+    top: 38%;
+    left: 1%;
+  }
+  .animalSelection .slider div {
+    width: 113px;
+    height: 164px;
+  }
+  .animalSelection .slider div:hover {
+    transform: scale(1.2);
+  }
+  .animalSelection .slider div:hover .title {
+    font-size: 12px;
+    line-height: 14.06px;
+  }
+  .animalSelection .slider div img {
+    width: 100%;
+    height: 100%;
+  }
+  .animalSelection #rangeTop {
+    top: 84.5%;
+    right: 20%;
+  }
+  .animalSelection #sliderTopBlock {
+    width: 44%;
+    top: 89.5%;
+    right: 10.5%;
+  }
+}
 .HowItWorks {
   width: 100%;
   height: 1296px;
@@ -682,6 +733,41 @@ body {
     margin: 40px;
   }
 }
+@media (max-width: 320px) {
+  .HowItWorks {
+    margin: 0;
+  }
+  .HowItWorks .HowItWorks__show {
+    margin: 50px auto 0;
+    padding: 0 10px;
+  }
+  .HowItWorks .HowItWorks__show h2 {
+    font-size: 36px;
+    line-height: 42.19px;
+  }
+  .HowItWorks .HowItWorks__show p {
+    margin: 22px 0 0 0;
+    font-size: 14px;
+    line-height: 16.41px;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .HowItWorks .HowItWorks__show .slider__howItWorks {
+    margin: 47px auto 20px;
+  }
+  .HowItWorks .HowItWorks__show #HowItWorks__button {
+    margin: 22px 22px 0 auto;
+  }
+  .HowItWorks .HowItWorks_cart .HowItWorks_cart_wrap {
+    margin: 30px auto;
+  }
+  .HowItWorks .HowItWorks_cart .HowItWorks_cart_wrap div {
+    max-width: 93%;
+  }
+  .HowItWorks .HowItWorks_cart .HowItWorks_cart_wrap .cart_mis {
+    margin: 10px 0 14px 0;
+  }
+}
 .PetsSlider {
   width: 100%;
   height: auto;
@@ -829,17 +915,48 @@ body {
   background: yellowgreen;
 }
 
+@media (max-width: 320px) {
+  .PetsSlider {
+    margin-bottom: 0;
+  }
+  .PetsSlider .slider_pets {
+    margin: 30px 0;
+  }
+  .PetsSlider p {
+    font-size: 36px;
+    margin: 0;
+    margin-top: 46px;
+  }
+  .PetsSlider .selectAnimal {
+    margin: 10px 0 27px;
+  }
+  .PetsSlider #chooseAnimal p {
+    margin: 0;
+  }
+}
 @media (max-width: 640px) {
   .PetsSlider {
     margin: 0;
     margin-top: 0;
+  }
+}
+@media (max-width: 640px) and (min-width: 361px) {
+  .PetsSlider {
     margin-bottom: 50px;
   }
+}
+@media (max-width: 640px) {
   .PetsSlider .slider_pets {
-    margin: 34px -17px 33px 0;
     justify-content: left;
     height: auto;
   }
+}
+@media (max-width: 640px) and (min-width: 361px) {
+  .PetsSlider .slider_pets {
+    margin: 34px -17px 33px 0;
+  }
+}
+@media (max-width: 640px) {
   .PetsSlider .slider_pets div {
     margin: 0 10px;
   }
@@ -858,10 +975,13 @@ body {
     font-size: 27px;
     margin: 0;
   }
+}
+@media (max-width: 640px) and (min-width: 361px) {
   .PetsSlider .selectAnimal {
     margin: 10px 0 40px;
   }
 }
+
 @media (max-width: 1000px) {
   .PetsSlider {
     overflow: hidden;
@@ -1086,6 +1206,31 @@ body {
     margin: 3px auto 40px;
   }
 }
+@media (max-width: 320px) {
+  .stepsToPay .stepsToPay_title {
+    font-size: 36px;
+    margin: 50px auto 15px;
+  }
+  .stepsToPay .stepsToPay_info {
+    display: none;
+  }
+  .stepsToPay .steps {
+    margin: 15px auto 36px;
+  }
+  .stepsToPay .arrow1 {
+    position: absolute;
+    top: 34.5%;
+    left: 43%;
+  }
+  .stepsToPay .arrow2 {
+    position: absolute;
+    top: 63%;
+    left: 42.5%;
+  }
+  .stepsToPay #donate {
+    margin: 3px auto 50px;
+  }
+}
 .coments {
   display: flex;
   justify-content: space-evenly;
@@ -1235,6 +1380,25 @@ body {
   }
   .coments label {
     margin: 70px 0 0 0;
+  }
+}
+@media (max-width: 320px) {
+  .coments {
+    margin-bottom: 40px;
+  }
+  .coments .coments__title {
+    font-size: 36px;
+    margin: 48px 0 18px 0;
+  }
+  .coments .coments__slider {
+    margin: 50px auto 40px;
+    min-height: 245px;
+  }
+  .coments label {
+    margin: 85px 0 0 0;
+  }
+  .coments #leaveFeedback {
+    margin: 10px;
   }
 }
 #leaveFeedback:hover {
@@ -1420,6 +1584,15 @@ body {
     position: absolute;
     top: 37%;
     left: 75%;
+  }
+}
+@media (max-width: 320px) {
+  .Map .Map__title {
+    font-size: 36px;
+    margin: 0 0 0 0;
+  }
+  .Map #mapButt {
+    margin: 50px auto 60px;
   }
 }
 #LocalEagle .MapAnimal__info {
@@ -1797,18 +1970,67 @@ body {
   .footer .foot-wrap-first .ContactsForm #sendForm {
     margin: -10px 0 0 250px;
   }
-  .footer .foot-wrap-first .InfoAboutUs .FooterNavi .footer-nav__list #donateVol {
-    width: 120%;
+  .footer .foot-wrap-first .InfoAboutUs .FooterNavi {
     position: absolute;
-    top: -214%;
-    left: 139%;
+    top: -209%;
+    left: -51%;
+  }
+  .footer .foot-wrap-first .InfoAboutUs .FooterNavi .footer-nav__list {
+    flex-direction: column;
+    width: 150px;
+  }
+  .footer .foot-wrap-first .InfoAboutUs .FooterNavi .footer-nav__list li {
+    margin: 2px;
+  }
+  .footer .foot-wrap-first .InfoAboutUs .FooterNavi .footer-nav__list #donateVol {
+    width: 185%;
+    position: absolute;
+    top: -10%;
+    left: 295%;
   }
   .footer .foot-wrap-first .InfoAboutUs .infoAboutZoo {
-    margin: 3px 0 0 2px;
+    margin: 50px 0 0 2px;
   }
   .footer .foot-wrap-sec {
     margin-top: 60px;
     padding: 20px 0;
+  }
+}
+@media (max-width: 320px) {
+  .footer {
+    padding: 50px 0 0 10px;
+  }
+  .footer .foot-wrap-first {
+    width: 100%;
+    margin-bottom: 110px;
+  }
+  .footer .foot-wrap-first .ContactsForm {
+    width: 97%;
+  }
+  .footer .foot-wrap-first .ContactsForm h3 {
+    margin: 145px 0 0 0;
+  }
+  .footer .foot-wrap-first .ContactsForm #sendForm {
+    margin: -10px 0 0 0;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .footer .foot-wrap-first .InfoAboutUs {
+    width: 70%;
+  }
+  .footer .foot-wrap-first .InfoAboutUs .FooterNavi {
+    top: -192%;
+    left: -23%;
+  }
+  .footer .foot-wrap-first .InfoAboutUs .FooterNavi .footer-nav__list li {
+    margin: 4px 0 0;
+  }
+  .footer .foot-wrap-first .InfoAboutUs .FooterNavi .footer-nav__list #donateVol {
+    top: 1705%;
+    left: 42%;
+  }
+  .footer .foot-wrap-first .InfoAboutUs .infoAboutZoo {
+    margin: 23px 0 0 2px;
   }
 }
 #donateVol:hover {
