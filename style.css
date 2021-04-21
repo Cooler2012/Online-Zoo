@@ -186,7 +186,7 @@ body {
   }
 }
 .main {
-  margin: 85px auto 0;
+  margin: 0 auto;
   flex-direction: column;
   max-width: 1920px;
 }
@@ -464,6 +464,10 @@ body {
   }
 }
 @media (max-width: 640px) {
+  .main {
+    margin: 85px auto 0;
+  }
+
   .social {
     top: 77%;
     left: 3%;
