@@ -2,7 +2,7 @@ body {
     margin: 0 auto;
     padding: 0;
     width: 100%;
-    border: 2px solid yellowgreen;
+    // border: 2px solid yellowgreen;
     display: flex;
     justify-content: center;
 }
@@ -134,7 +134,11 @@ body {
 }
 
 @media (max-width: 640px) {
-    .header {
+    .wrap{
+        position: fixed;
+        z-index: 5;
+        background: #F2F2F2;
+        .header {
         width: 94%;
         justify-content: space-between;
         position: relative;
@@ -170,6 +174,7 @@ body {
             width: 33px;
         }
 
+        }
     }
 }
 
@@ -183,7 +188,7 @@ body {
 
 //                   Main Block
 .main {
-    margin: 0 auto;
+    margin: 85px auto 0;
     @extend %align;
     flex-direction: column;
     max-width: 1920px;
