@@ -23,14 +23,89 @@ body {
 }
 //                         header
 .wrap {
+    transition: 1s;
+    margin: 0 auto;
+    padding: 20px 0;
     width: 100%;
+    max-width: 1920px;
     @media (max-width:1200px) {
         max-width: 1200px;
     }
 }
+.dark-theme {
+    background: #333333;
+    .header {
+        // position: fixed;
+        .header__logo {
+            a {
+                #head_logo {
+                    path {
+                        fill: #F2F2F2;
+                    }
+                }
+            }
+        }
+        .header__nav {
+            .header-nav__list {
+                li{
+                    a {
+                        color: #F2F2F2;
+                    }
+                }
+            }
+        }
+    }
+    .HowItWorks__show{
+        h2, p {
+            color: #F2F2F2;
+        }
+    }
+    .HowItWorks_cart{
+        background: #4F4F4F;
+        h3, p {
+            color: #F2F2F2;
+        }
+    }
+    p, h3 {
+        color: #F2F2F2;
+    }
+    .slider_pets {
+        #arrows {
+            path {
+                fill: #F2F2F2;
+            }
+        }
+    }
+    .coments__title {
+        color: #F2F2F2;
+    }
+    .coments__slider {
+        .feed {
+            background: #4F4F4F;
+        }
+        .prewArrow {
+            svg {
+                path {
+                    fill: #F2F2F2;
+                }
+            }
+        }
+        .nextArrow {
+            svg {
+                path {
+                    fill: #F2F2F2;
+                }
+            }
+        }
+    }
+}
+
+
+
+
 
 .header {
-    margin: 20px auto;
+    margin: 0 auto;
     max-width: 1620px;
     @extend %align; 
     flex-direction: row;
@@ -539,7 +614,8 @@ body {
 .HowItWorks {
     width: 100%;
     height: 1296px;
-    margin: 50px auto 0;
+    padding-top: 50px;
+    margin: 0 auto;
     .HowItWorks__show {
         padding: 0 15px;
         @media (min-width: 1201px){
@@ -771,7 +847,8 @@ body {
     height: auto;
     @extend %align;
     flex-direction: column;
-    margin: 150px auto;
+    margin: 0 auto;
+    padding: 150px 0;
     p {
         font-size: 48px;
         font-family: 'Roboto', sans-serif;
@@ -1076,7 +1153,7 @@ body {
             flex-direction: column;
             width: 245px;
             height: 245px;
-            border: 1px solid rgb(75,216,181);
+            border: 3px solid rgb(75,216,181);
             border-radius: 50%;
             // border-color: rgb(75,216,181);
             h3 {
@@ -1244,6 +1321,7 @@ body {
     align-items: center;
     flex-direction: column;
     position: relative;
+    width: 100%;
     .coments__title {
         @media (min-width: 1201px) {
             margin-top: 80px; 
@@ -1468,7 +1546,10 @@ body {
         font-family: 'Roboto', sans-serif;
         font-weight: 900;
     }
-    #mapBackgr {
+    .mapDarkBackgr {
+        display: none;
+    }
+    #mapBackgr , #mapDarkBackgr{
         width: 100%;
         height: 100%;
         margin: 35px 0;
@@ -1544,7 +1625,7 @@ body {
 @media (max-width: 1200px) {
     .Map {
         margin: 50px auto 20px; 
-        #mapBackgr {
+        #mapBackgr, #mapDarkBackgr {
             margin: 10px 0;
         }
         #mapButt {
@@ -1682,6 +1763,39 @@ body {
 }
 #mapButt:active {
     background: yellowgreen;
+}
+
+
+.grey-theme {
+    background: #4F4F4F;
+    .stepsToPay_title, .stepsToPay_info {
+        color: #F2F2F2;
+    }
+    .steps {
+        .step {
+            .stepInfo {
+                color: #F2F2F2;
+            }
+        }
+    }
+    #mapBackgr {
+        display: none;
+    }
+    #mapDarkBackgr {
+        display: block;
+    }
+    #LocEagle, #LocCroc, #LocGarilla, #LocPanda {
+        .ImWrap {
+            .MapAnimal__info {
+                background: #333333;
+                .animalInfo {
+                    .animName, .animalRegion, .animalPopulation {
+                        color: #F2F2F2;
+                    }
+                }
+            }
+        }
+    }
 }
 
 

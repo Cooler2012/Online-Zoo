@@ -25,7 +25,11 @@ body {
 }
 
 .wrap {
+  transition: 1s;
+  margin: 0 auto;
+  padding: 20px 0;
   width: 100%;
+  max-width: 1920px;
 }
 @media (max-width: 1200px) {
   .wrap {
@@ -33,8 +37,45 @@ body {
   }
 }
 
+.dark-theme {
+  background: #333333;
+}
+.dark-theme .header .header__logo a #head_logo path {
+  fill: #F2F2F2;
+}
+.dark-theme .header .header__nav .header-nav__list li a {
+  color: #F2F2F2;
+}
+.dark-theme .HowItWorks__show h2, .dark-theme .HowItWorks__show p {
+  color: #F2F2F2;
+}
+.dark-theme .HowItWorks_cart {
+  background: #4F4F4F;
+}
+.dark-theme .HowItWorks_cart h3, .dark-theme .HowItWorks_cart p {
+  color: #F2F2F2;
+}
+.dark-theme p, .dark-theme h3 {
+  color: #F2F2F2;
+}
+.dark-theme .slider_pets #arrows path {
+  fill: #F2F2F2;
+}
+.dark-theme .coments__title {
+  color: #F2F2F2;
+}
+.dark-theme .coments__slider .feed {
+  background: #4F4F4F;
+}
+.dark-theme .coments__slider .prewArrow svg path {
+  fill: #F2F2F2;
+}
+.dark-theme .coments__slider .nextArrow svg path {
+  fill: #F2F2F2;
+}
+
 .header {
-  margin: 20px auto;
+  margin: 0 auto;
   max-width: 1620px;
   flex-direction: row;
   width: 95%;
@@ -552,7 +593,8 @@ body {
 .HowItWorks {
   width: 100%;
   height: 1296px;
-  margin: 50px auto 0;
+  padding-top: 50px;
+  margin: 0 auto;
 }
 .HowItWorks .HowItWorks__show {
   padding: 0 15px;
@@ -780,7 +822,8 @@ body {
   width: 100%;
   height: auto;
   flex-direction: column;
-  margin: 150px auto;
+  margin: 0 auto;
+  padding: 150px 0;
 }
 .PetsSlider p {
   font-size: 48px;
@@ -1090,7 +1133,7 @@ body {
   flex-direction: column;
   width: 245px;
   height: 245px;
-  border: 1px solid #4bd8b5;
+  border: 3px solid #4bd8b5;
   border-radius: 50%;
 }
 .stepsToPay .steps .step h3 {
@@ -1245,6 +1288,7 @@ body {
   align-items: center;
   flex-direction: column;
   position: relative;
+  width: 100%;
 }
 .coments .coments__title {
   font-size: 48px;
@@ -1458,7 +1502,10 @@ body {
   font-family: 'Roboto', sans-serif;
   font-weight: 900;
 }
-.Map #mapBackgr {
+.Map .mapDarkBackgr {
+  display: none;
+}
+.Map #mapBackgr, .Map #mapDarkBackgr {
   width: 100%;
   height: 100%;
   margin: 35px 0;
@@ -1533,7 +1580,7 @@ body {
   .Map {
     margin: 50px auto 20px;
   }
-  .Map #mapBackgr {
+  .Map #mapBackgr, .Map #mapDarkBackgr {
     margin: 10px 0;
   }
   .Map #mapButt {
@@ -1654,6 +1701,28 @@ body {
 
 #mapButt:active {
   background: yellowgreen;
+}
+
+.grey-theme {
+  background: #4F4F4F;
+}
+.grey-theme .stepsToPay_title, .grey-theme .stepsToPay_info {
+  color: #F2F2F2;
+}
+.grey-theme .steps .step .stepInfo {
+  color: #F2F2F2;
+}
+.grey-theme #mapBackgr {
+  display: none;
+}
+.grey-theme #mapDarkBackgr {
+  display: block;
+}
+.grey-theme #LocEagle .ImWrap .MapAnimal__info, .grey-theme #LocCroc .ImWrap .MapAnimal__info, .grey-theme #LocGarilla .ImWrap .MapAnimal__info, .grey-theme #LocPanda .ImWrap .MapAnimal__info {
+  background: #333333;
+}
+.grey-theme #LocEagle .ImWrap .MapAnimal__info .animalInfo .animName, .grey-theme #LocEagle .ImWrap .MapAnimal__info .animalInfo .animalRegion, .grey-theme #LocEagle .ImWrap .MapAnimal__info .animalInfo .animalPopulation, .grey-theme #LocCroc .ImWrap .MapAnimal__info .animalInfo .animName, .grey-theme #LocCroc .ImWrap .MapAnimal__info .animalInfo .animalRegion, .grey-theme #LocCroc .ImWrap .MapAnimal__info .animalInfo .animalPopulation, .grey-theme #LocGarilla .ImWrap .MapAnimal__info .animalInfo .animName, .grey-theme #LocGarilla .ImWrap .MapAnimal__info .animalInfo .animalRegion, .grey-theme #LocGarilla .ImWrap .MapAnimal__info .animalInfo .animalPopulation, .grey-theme #LocPanda .ImWrap .MapAnimal__info .animalInfo .animName, .grey-theme #LocPanda .ImWrap .MapAnimal__info .animalInfo .animalRegion, .grey-theme #LocPanda .ImWrap .MapAnimal__info .animalInfo .animalPopulation {
+  color: #F2F2F2;
 }
 
 .footer {
