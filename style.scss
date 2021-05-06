@@ -32,73 +32,6 @@ body {
         max-width: 1200px;
     }
 }
-.dark-theme {
-    background: #333333;
-    .header {
-        // position: fixed;
-        .header__logo {
-            a {
-                #head_logo {
-                    path {
-                        fill: #F2F2F2;
-                    }
-                }
-            }
-        }
-        .header__nav {
-            .header-nav__list {
-                li{
-                    a {
-                        color: #F2F2F2;
-                    }
-                }
-            }
-        }
-    }
-    .HowItWorks__show{
-        h2, p {
-            color: #F2F2F2;
-        }
-    }
-    .HowItWorks_cart{
-        background: #4F4F4F;
-        h3, p {
-            color: #F2F2F2;
-        }
-    }
-    p, h3 {
-        color: #F2F2F2;
-    }
-    .slider_pets {
-        #arrows {
-            path {
-                fill: #F2F2F2;
-            }
-        }
-    }
-    .coments__title {
-        color: #F2F2F2;
-    }
-    .coments__slider {
-        .feed {
-            background: #4F4F4F;
-        }
-        .prewArrow {
-            svg {
-                path {
-                    fill: #F2F2F2;
-                }
-            }
-        }
-        .nextArrow {
-            svg {
-                path {
-                    fill: #F2F2F2;
-                }
-            }
-        }
-    }
-}
 
 
 .header {
@@ -193,6 +126,10 @@ body {
         transform: scale(1.1);
         box-shadow: 0 1px 2px whitesmoke;
     }
+    .dark-theme input::before {
+        background:black;
+    }
+
     input:checked:before{
         left: 22px;
     }
@@ -921,72 +858,98 @@ body {
     .slider_pets {
         width: 100%;
         height: 421px;
-        @extend %align;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         margin: 50px auto;
-        div {
-            position: relative;
-            width: 278px;
-            height: 399px;
-            margin: 0 auto;
-            // z-index: 10;
-            &:hover {
-                // transition: all 0.3s linear;
-                transform: scale(1.1);
-                transition: 2s;
-                z-index: 100;
-                p, button {
-                    opacity: 1;
-                    transition: all 1.5s linear;
-                }
-            }
-            .title {
-                opacity: 0;
-                font-family: 'Roboto', sans-serif;
-                font-size: 12px;
-                position: absolute;
-                color: white;
-                top: 55%;
-                left: 10px;
-            }
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                border-radius: 5%;
-            }
-            button {
-                padding: 0;
+        .slider-cont {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1272px;
+            overflow: hidden;
+            .slider-wrap {
                 display: flex;
-                justify-content: center;
+                justify-content: space-between;
                 align-items: center;
-                width: 90%;
-                height: 24px;
-                border: none;
-                opacity: 0;
-                background: inherit;
-                position: absolute;
-                top: 80%;
-                left: 5%;
-                text-transform: uppercase;
-                a {
-                    text-decoration: none;
-                    margin: 0 2px;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    #nameBut {
-                        color: rgb(75,216,181);
-                        font-family: 'Roboto', sans-serif;
-                        font-size: 15px;
+                max-width: 1272px;
+                position: relative;
+                left: 0px;
+                transition: all ease 1s;
+                .target {
+                    transform: scale(1.1);
+                    transition: 1s;
+                    .title, button {
+                        opacity: 1;
+                        transition: all 1.5s linear;
                     }
-                    #nameButDonate {
-                        color: #F2F2F2;
-                        font-family: 'Roboto', sans-serif;
-                        font-size: 15px;
+                }
+                div {
+                    position: relative;
+                    width: 278px;
+                    height: 399px;
+                    margin: 0 20px;
+                    // z-index: 10;
+                    &:hover {
+                        // transition: all 0.3s linear;
+                        transform: scale(1.1);
+                        transition: 1s;
+                        z-index: 100;
+                        p, button {
+                            opacity: 1;
+                            transition: all 1.5s linear;
+                        }
                     }
-                    .imgBut {
-                        width: 25px;
-                        height: 25px;
+                    .title {
+                        opacity: 0;
+                        font-family: 'Roboto', sans-serif;
+                        font-size: 12px;
+                        position: absolute;
+                        color: white;
+                        top: 55%;
+                        left: 10px;
+                    }
+                    img {
+                        width: 278px;
+                        height: 399px;
+                        object-fit: cover;
+                        border-radius: 5%;
+                    }
+                    button {
+                        padding: 0;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 90%;
+                        height: 24px;
+                        border: none;
+                        opacity: 0;
+                        background: inherit;
+                        position: absolute;
+                        top: 80%;
+                        left: 5%;
+                        text-transform: uppercase;
+                        a {
+                            text-decoration: none;
+                            margin: 0 2px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            #nameBut {
+                                color: rgb(75,216,181);
+                                font-family: 'Roboto', sans-serif;
+                                font-size: 15px;
+                            }
+                            #nameButDonate {
+                                color: #F2F2F2;
+                                font-family: 'Roboto', sans-serif;
+                                font-size: 15px;
+                            }
+                            .imgBut {
+                                width: 25px;
+                                height: 25px;
+                            }
+                        }
                     }
                 }
             }
@@ -996,11 +959,15 @@ body {
 
 .prewArrow, .nextArrow {
     max-width: 35px;
-    margin: 0 10px;
+    margin: 0 35px;
     display: flex;
     align-items: center;
     &:hover {
-        width: 30px;
+        svg {
+            path {
+                fill: #597da3;
+            }
+        }
     }
 }
 #arrow {
@@ -1011,7 +978,11 @@ body {
     width: 20px;
     height: 30px;
     &:hover {
-        background: yellowgreen;
+        svg {
+            path {
+                fill: #EB5757;
+            }
+        }
     }
 }
 
@@ -1569,6 +1540,9 @@ body {
             position: absolute;
             top: 37%;
             left: 76%;
+            .MapAnimal__info {
+                left: -155px;
+            }
         }
     }
 
@@ -1785,16 +1759,93 @@ body {
         }   
 }
 
-
-
-
-
 #mapButt:hover {
     background: linear-gradient(90deg, rgba(207,75,216,1) 35%, rgba(73,99,223,1) 100%);
     cursor: pointer;
 }
 #mapButt:active {
     background: yellowgreen;
+}
+
+.dark-theme {
+    background: #333333;
+    .changeTheme {
+        input {
+            background-color: grey;
+        }
+        input:before {
+            background: black;
+        }
+    }
+    .header {
+        // position: fixed;
+        .header__logo {
+            a {
+                #head_logo {
+                    path {
+                        fill: #F2F2F2;
+                    }
+                }
+            }
+        }
+        .header__nav {
+            .header-nav__list {
+                li{
+                    a {
+                        color: #F2F2F2;
+                    }
+                }
+            }
+        }
+    }
+    .HowItWorks__show{
+        h2, p {
+            color: #F2F2F2;
+        }
+    }
+    .HowItWorks_cart{
+        background: #4F4F4F;
+        h3, p {
+            color: #F2F2F2;
+        }
+    }
+    p, h3 {
+        color: #F2F2F2;
+    }
+    .slider_pets {
+        #arrows {
+            path {
+                fill: #F2F2F2;
+            }
+            &:hover {
+                path {
+                    fill: #EB5757;
+                }
+            }
+        }
+    }
+    .coments__title {
+        color: #F2F2F2;
+    }
+    .coments__slider {
+        .feed {
+            background: #4F4F4F;
+        }
+        .prewArrow {
+            svg {
+                path {
+                    fill: #F2F2F2;
+                }
+            }
+        }
+        .nextArrow {
+            svg {
+                path {
+                    fill: #F2F2F2;
+                }
+            }
+        }
+    }
 }
 
 
@@ -2356,8 +2407,8 @@ input[type=range]::-webkit-slider-thumb {
       visibility: hidden;
   }
 
-
-  #comment {
-      font-size: 24px;
-      color: #F2F2F2;
-  }
+.comment {
+    color: #F2F2F2;
+    font-size: 24px;
+    position: relative;
+}

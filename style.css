@@ -6,7 +6,7 @@ body {
   justify-content: center;
 }
 
-.header, .header__nav, .header-nav__list, .main, .social .social__list, .HowItWorks_cart, .HowItWorks_cart .HowItWorks_cart_wrap, .PetsSlider, .PetsSlider .slider_pets, .stepsToPay, .footer .foot-wrap-first .InfoAboutUs .FooterNavi, .footer .foot-wrap-first .InfoAboutUs .FooterNavi .footer-nav__list {
+.header, .header__nav, .header-nav__list, .main, .social .social__list, .HowItWorks_cart, .HowItWorks_cart .HowItWorks_cart_wrap, .PetsSlider, .stepsToPay, .footer .foot-wrap-first .InfoAboutUs .FooterNavi, .footer .foot-wrap-first .InfoAboutUs .FooterNavi .footer-nav__list {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -35,43 +35,6 @@ body {
   .wrap {
     max-width: 1200px;
   }
-}
-
-.dark-theme {
-  background: #333333;
-}
-.dark-theme .header .header__logo a #head_logo path {
-  fill: #F2F2F2;
-}
-.dark-theme .header .header__nav .header-nav__list li a {
-  color: #F2F2F2;
-}
-.dark-theme .HowItWorks__show h2, .dark-theme .HowItWorks__show p {
-  color: #F2F2F2;
-}
-.dark-theme .HowItWorks_cart {
-  background: #4F4F4F;
-}
-.dark-theme .HowItWorks_cart h3, .dark-theme .HowItWorks_cart p {
-  color: #F2F2F2;
-}
-.dark-theme p, .dark-theme h3 {
-  color: #F2F2F2;
-}
-.dark-theme .slider_pets #arrows path {
-  fill: #F2F2F2;
-}
-.dark-theme .coments__title {
-  color: #F2F2F2;
-}
-.dark-theme .coments__slider .feed {
-  background: #4F4F4F;
-}
-.dark-theme .coments__slider .prewArrow svg path {
-  fill: #F2F2F2;
-}
-.dark-theme .coments__slider .nextArrow svg path {
-  fill: #F2F2F2;
 }
 
 .header {
@@ -165,6 +128,9 @@ body {
   transition: .5s;
   transform: scale(1.1);
   box-shadow: 0 1px 2px whitesmoke;
+}
+.changeTheme .dark-theme input::before {
+  background: black;
 }
 .changeTheme input:checked:before {
   left: 22px;
@@ -899,24 +865,51 @@ body {
 .PetsSlider .slider_pets {
   width: 100%;
   height: 421px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 50px auto;
 }
-.PetsSlider .slider_pets div {
+.PetsSlider .slider_pets .slider-cont {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1272px;
+  overflow: hidden;
+}
+.PetsSlider .slider_pets .slider-cont .slider-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1272px;
   position: relative;
-  width: 278px;
-  height: 399px;
-  margin: 0 auto;
+  left: 0px;
+  transition: all ease 1s;
 }
-.PetsSlider .slider_pets div:hover {
+.PetsSlider .slider_pets .slider-cont .slider-wrap .target {
   transform: scale(1.1);
-  transition: 2s;
-  z-index: 100;
+  transition: 1s;
 }
-.PetsSlider .slider_pets div:hover p, .PetsSlider .slider_pets div:hover button {
+.PetsSlider .slider_pets .slider-cont .slider-wrap .target .title, .PetsSlider .slider_pets .slider-cont .slider-wrap .target button {
   opacity: 1;
   transition: all 1.5s linear;
 }
-.PetsSlider .slider_pets div .title {
+.PetsSlider .slider_pets .slider-cont .slider-wrap div {
+  position: relative;
+  width: 278px;
+  height: 399px;
+  margin: 0 20px;
+}
+.PetsSlider .slider_pets .slider-cont .slider-wrap div:hover {
+  transform: scale(1.1);
+  transition: 1s;
+  z-index: 100;
+}
+.PetsSlider .slider_pets .slider-cont .slider-wrap div:hover p, .PetsSlider .slider_pets .slider-cont .slider-wrap div:hover button {
+  opacity: 1;
+  transition: all 1.5s linear;
+}
+.PetsSlider .slider_pets .slider-cont .slider-wrap div .title {
   opacity: 0;
   font-family: 'Roboto', sans-serif;
   font-size: 12px;
@@ -925,13 +918,13 @@ body {
   top: 55%;
   left: 10px;
 }
-.PetsSlider .slider_pets div img {
-  width: 100%;
-  height: 100%;
+.PetsSlider .slider_pets .slider-cont .slider-wrap div img {
+  width: 278px;
+  height: 399px;
   object-fit: cover;
   border-radius: 5%;
 }
-.PetsSlider .slider_pets div button {
+.PetsSlider .slider_pets .slider-cont .slider-wrap div button {
   padding: 0;
   display: flex;
   justify-content: center;
@@ -946,36 +939,36 @@ body {
   left: 5%;
   text-transform: uppercase;
 }
-.PetsSlider .slider_pets div button a {
+.PetsSlider .slider_pets .slider-cont .slider-wrap div button a {
   text-decoration: none;
   margin: 0 2px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.PetsSlider .slider_pets div button a #nameBut {
+.PetsSlider .slider_pets .slider-cont .slider-wrap div button a #nameBut {
   color: #4bd8b5;
   font-family: 'Roboto', sans-serif;
   font-size: 15px;
 }
-.PetsSlider .slider_pets div button a #nameButDonate {
+.PetsSlider .slider_pets .slider-cont .slider-wrap div button a #nameButDonate {
   color: #F2F2F2;
   font-family: 'Roboto', sans-serif;
   font-size: 15px;
 }
-.PetsSlider .slider_pets div button a .imgBut {
+.PetsSlider .slider_pets .slider-cont .slider-wrap div button a .imgBut {
   width: 25px;
   height: 25px;
 }
 
 .prewArrow, .nextArrow {
   max-width: 35px;
-  margin: 0 10px;
+  margin: 0 35px;
   display: flex;
   align-items: center;
 }
-.prewArrow:hover, .nextArrow:hover {
-  width: 30px;
+.prewArrow:hover svg path, .nextArrow:hover svg path {
+  fill: #597da3;
 }
 
 #arrow {
@@ -987,8 +980,8 @@ body {
   width: 20px;
   height: 30px;
 }
-#arrows:hover {
-  background: yellowgreen;
+#arrows:hover svg path {
+  fill: #EB5757;
 }
 
 #chooseAnimal:hover {
@@ -1529,6 +1522,9 @@ body {
     top: 37%;
     left: 76%;
   }
+  .Map #LocPanda .MapAnimal__info {
+    left: -155px;
+  }
 }
 .Map .Map__title {
   margin-top: 80px;
@@ -1735,6 +1731,52 @@ body {
 
 #mapButt:active {
   background: yellowgreen;
+}
+
+.dark-theme {
+  background: #333333;
+}
+.dark-theme .changeTheme input {
+  background-color: grey;
+}
+.dark-theme .changeTheme input:before {
+  background: black;
+}
+.dark-theme .header .header__logo a #head_logo path {
+  fill: #F2F2F2;
+}
+.dark-theme .header .header__nav .header-nav__list li a {
+  color: #F2F2F2;
+}
+.dark-theme .HowItWorks__show h2, .dark-theme .HowItWorks__show p {
+  color: #F2F2F2;
+}
+.dark-theme .HowItWorks_cart {
+  background: #4F4F4F;
+}
+.dark-theme .HowItWorks_cart h3, .dark-theme .HowItWorks_cart p {
+  color: #F2F2F2;
+}
+.dark-theme p, .dark-theme h3 {
+  color: #F2F2F2;
+}
+.dark-theme .slider_pets #arrows path {
+  fill: #F2F2F2;
+}
+.dark-theme .slider_pets #arrows:hover path {
+  fill: #EB5757;
+}
+.dark-theme .coments__title {
+  color: #F2F2F2;
+}
+.dark-theme .coments__slider .feed {
+  background: #4F4F4F;
+}
+.dark-theme .coments__slider .prewArrow svg path {
+  fill: #F2F2F2;
+}
+.dark-theme .coments__slider .nextArrow svg path {
+  fill: #F2F2F2;
 }
 
 .grey-theme {
@@ -2231,7 +2273,8 @@ h1 {
   visibility: hidden;
 }
 
-#comment {
-  font-size: 24px;
+.comment {
   color: #F2F2F2;
+  font-size: 24px;
+  position: relative;
 }
