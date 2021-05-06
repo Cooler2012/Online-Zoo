@@ -101,9 +101,6 @@ body {
 }
 
 
-
-
-
 .header {
     margin: 0 auto;
     max-width: 1620px;
@@ -322,14 +319,14 @@ body {
     background: #597da3;
 }
 
-.WatchingAnimal {
+.watchingAnimal {
     width: 100%;
     height: 100%;
     font-family: 'Roboto', sans-serif;
     color: white;
     font-size: 89px;
     font-weight: 900;
-    .WatchingAnimal__title {
+    .watchingAnimal__title {
         position: absolute;
         @media (min-width: 1201px) {
         top: 206px;
@@ -372,83 +369,118 @@ body {
     background: yellowgreen;
 }
 
-.slider {
+.wrap-slider {
     @media (min-width: 1201px) {
         position: absolute;
         top: 450px;
-        left: 950px;
+        left: 770px;
+        overflow: hidden;
     }
-    width: 1100px;
-    height: 421px;
-    @extend %align;
-    div {
+    width: 2400px;
+    height: 310px;
+    display: flex;
+    align-items: center;
+    .slider {
         position: relative;
-        width: 140px;
-        height: 203px;
-        // z-index: 10;
-        &:hover {
-            transform: scale(2);
+        left: -250px;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        transition: all ease 1s;
+        div, .active {
+            position: relative;
+            width: 140px;
+            height: 203px;
+            border-radius: 10px;
+            overflow: hidden;
             transition: 1.5s;
-            z-index: 100;
-            p, button {
-                opacity: 1;
+            z-index: 1;
+            .title {
+                opacity: 0;
+                font-family: 'Roboto', sans-serif;
+                font-size: 9px;
+                position: absolute;
+                color: white;
+                top: 55%;
+                left: 8px;
             }
-        }
-        .title {
-            opacity: 0;
-            font-family: 'Roboto', sans-serif;
-            font-size: 12px;
-            position: absolute;
-            color: white;
-            top: 35%;
-            left: 10px;
-        }
-        img {
-            @media (min-width: 1201px) {
-                width: 140px;
-                height: 203px; 
+            img {
+                @media (min-width: 1201px) {
+                    width: 140px;
+                    height: 203px; 
+                }
+                object-fit: cover;
             }
-            object-fit: cover;
-            border-radius: 15%;
-        }
-        button {
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 90%;
-            height: 24px;
-            border: none;
-            opacity: 0;
-            background: inherit;
-            position: absolute;
-            top: 80%;
-            left: 5%;
-            text-transform: uppercase;
-            a {
-                text-decoration: none;
-                margin: 0 2px;
+            button {
+                padding: 0;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                #nameBut {
-                    color: rgb(75,216,181);
-                    font-family: 'Roboto', sans-serif;
-                    font-size: 5px;
-                }
-                #nameButDonate {
-                    color: #F2F2F2;
-                    font-family: 'Roboto', sans-serif;
-                    font-size: 5px;
-                }
-                .imgBut {
-                    width: 25px;
-                    height: 25px;
+                width: 90%;
+                height: 24px;
+                border: none;
+                opacity: 0;
+                background: inherit;
+                position: absolute;
+                top: 80%;
+                left: 5%;
+                text-transform: uppercase;
+                a {
+                    text-decoration: none;
+                    margin: 0 2px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    #nameBut {
+                        color: rgb(75,216,181);
+                        font-family: 'Roboto', sans-serif;
+                        font-size: 5px;
+                    }
+                    #nameButDonate {
+                        color: #F2F2F2;
+                        font-family: 'Roboto', sans-serif;
+                        font-size: 5px;
+                    }
+                    .imgBut {
+                        width: 25px;
+                        height: 25px;
+                    }
                 }
             }
         }
+        .circule-left, .circule-right {
+            display: flex;
+            align-items: center;
+        }
+        .circule-left {
+            justify-content: flex-start;
+        }
+        .circule-right {
+            justify-content: flex-end;
+        }
+        .active {
+            transform: scale(1.4);
+            z-index: 5;
+            .title, button {
+                opacity: 1;
+            }
+        }
+
+
+    }
+    .slider::after {
+        content: '';
+        width: 94%;
+        height: 1px;
+        top: 50%;
+        background-color: #F2F2F2;
+        position: absolute;
+        z-index: 0;
     }
 }
+
 #sliderTopBlock {
     margin: 0 0 40px;
     display: block;
@@ -611,7 +643,7 @@ body {
 
 
 //                                 How it works    section
-.HowItWorks {
+.howItWorks {
     width: 100%;
     height: 1296px;
     padding-top: 50px;
@@ -2322,4 +2354,10 @@ input[type=range]::-webkit-slider-thumb {
 
   h1 {
       visibility: hidden;
+  }
+
+
+  #comment {
+      font-size: 24px;
+      color: #F2F2F2;
   }
