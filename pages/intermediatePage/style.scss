@@ -34,7 +34,8 @@ body {
   }
   
   .header {
-    margin: 20px auto;
+    margin: 0 auto;
+    padding: 30px 0;
     max-width: 1620px;
     flex-direction: row;
     width: 95%;
@@ -299,14 +300,6 @@ body {
    }
   
   
-  
-  
-  
-  
-  
-  
-  
-  
   .Map {
     width: 1920px;
     display: flex;
@@ -315,6 +308,7 @@ body {
     flex-direction: column;
     /* background: #F2F2F2; */
     position: relative;
+    padding-bottom: 100px;
   }
   .Map #LocEagle {
     position: absolute;
@@ -415,14 +409,15 @@ body {
   
   
   .footer {
+    width: 100%;
     display: flex;
-    max-width: 1620px;
+    // max-width: 1620px;
     margin: 0 auto;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
     background: #333333;
-    color: #FFFFFF;
-    padding: 100px 150px 50px;
+    color: #FFFFFF
   }
   @media (min-width: 1201px) {
     .footer {
@@ -430,6 +425,10 @@ body {
     }
   }
   .footer .foot-wrap-first {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1620px;
     height: 80%;
     display: flex;
     justify-content: space-evenly;
@@ -886,3 +885,102 @@ body {
     visibility: hidden;
   }
   
+
+  
+.dark-theme {
+  background: #333333;
+  .changeTheme {
+      input {
+          background-color: grey;
+      }
+      input:before {
+          background: black;
+      }
+  }
+  .header {
+      // position: fixed;
+      .header__logo {
+          a {
+              #head_logo {
+                  path {
+                      fill: #F2F2F2;
+                  }
+              }
+          }
+      }
+      .header__nav {
+          .header-nav__list {
+              li{
+                  a {
+                      color: #F2F2F2;
+                  }
+              }
+          }
+      }
+  }
+  .HowItWorks__show{
+      h2, p {
+          color: #F2F2F2;
+      }
+  }
+  .HowItWorks_cart{
+      background: #4F4F4F;
+      h3, p {
+          color: #F2F2F2;
+      }
+  }
+  p, h3 {
+      color: #F2F2F2;
+  }
+  .slider_pets {
+      #arrows {
+          path {
+              fill: #F2F2F2;
+          }
+          &:hover {
+              path {
+                  fill: #EB5757;
+              }
+          }
+      }
+  }
+  .coments__title {
+      color: #F2F2F2;
+  }
+  .coments__slider {
+      .feed {
+          background: #4F4F4F;
+      }
+      .prewArrow {
+          svg {
+              path {
+                  fill: #F2F2F2;
+              }
+          }
+      }
+      .nextArrow {
+          svg {
+              path {
+                  fill: #F2F2F2;
+              }
+          }
+      }
+  }
+}
+
+
+.grey-theme {
+  background: #4F4F4F;
+  .item {
+      box-shadow: 0 0 0 4px #4F4F4F, 0 0 0 6px #4bd8b5;
+      box-shadow: linear-gradient(90deg, #4bd8b5 35%, #49d6df 100%);;
+    }
+
+  .main {
+    
+      .slider__title, .slider__info {
+          color: #F2F2F2;
+      }
+  } 
+}
+

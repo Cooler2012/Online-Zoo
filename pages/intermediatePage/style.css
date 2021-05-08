@@ -34,7 +34,8 @@ body {
   }
 }
 .header {
-  margin: 20px auto;
+  margin: 0 auto;
+  padding: 30px 0;
   max-width: 1620px;
   flex-direction: row;
   width: 95%;
@@ -316,6 +317,7 @@ body {
   flex-direction: column;
   /* background: #F2F2F2; */
   position: relative;
+  padding-bottom: 100px;
 }
 
 .Map #LocEagle {
@@ -422,14 +424,14 @@ body {
 }
 
 .footer {
+  width: 100%;
   display: flex;
-  max-width: 1620px;
   margin: 0 auto;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
   background: #333333;
   color: #FFFFFF;
-  padding: 100px 150px 50px;
 }
 
 @media (min-width: 1201px) {
@@ -438,6 +440,10 @@ body {
   }
 }
 .footer .foot-wrap-first {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1620px;
   height: 80%;
   display: flex;
   justify-content: space-evenly;
@@ -964,4 +970,61 @@ label {
 
 h1 {
   visibility: hidden;
+}
+
+.dark-theme {
+  background: #333333;
+}
+.dark-theme .changeTheme input {
+  background-color: grey;
+}
+.dark-theme .changeTheme input:before {
+  background: black;
+}
+.dark-theme .header .header__logo a #head_logo path {
+  fill: #F2F2F2;
+}
+.dark-theme .header .header__nav .header-nav__list li a {
+  color: #F2F2F2;
+}
+.dark-theme .HowItWorks__show h2, .dark-theme .HowItWorks__show p {
+  color: #F2F2F2;
+}
+.dark-theme .HowItWorks_cart {
+  background: #4F4F4F;
+}
+.dark-theme .HowItWorks_cart h3, .dark-theme .HowItWorks_cart p {
+  color: #F2F2F2;
+}
+.dark-theme p, .dark-theme h3 {
+  color: #F2F2F2;
+}
+.dark-theme .slider_pets #arrows path {
+  fill: #F2F2F2;
+}
+.dark-theme .slider_pets #arrows:hover path {
+  fill: #EB5757;
+}
+.dark-theme .coments__title {
+  color: #F2F2F2;
+}
+.dark-theme .coments__slider .feed {
+  background: #4F4F4F;
+}
+.dark-theme .coments__slider .prewArrow svg path {
+  fill: #F2F2F2;
+}
+.dark-theme .coments__slider .nextArrow svg path {
+  fill: #F2F2F2;
+}
+
+.grey-theme {
+  background: #4F4F4F;
+}
+.grey-theme .item {
+  box-shadow: 0 0 0 4px #4F4F4F, 0 0 0 6px #4bd8b5;
+  box-shadow: linear-gradient(90deg, #4bd8b5 35%, #49d6df 100%);
+}
+.grey-theme .main .slider__title, .grey-theme .main .slider__info {
+  color: #F2F2F2;
 }
