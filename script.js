@@ -74,6 +74,7 @@ const addClassActive = function addClassActive (event) {
     event.currentTarget.classList.add('active');
     let index = searchIndex()+1;
     rangeOutput.innerHTML = '0' + index + '/08';
+    rangeValue.value = index;
 };
 
 slider.addEventListener('click', changePosSliderItems);
@@ -87,41 +88,115 @@ elef.addEventListener('click', addClassActive);
 kotia.addEventListener('click', addClassActive);
 
 //        Block Slider
-
-const btnPrew = document.getElementById('prewSlides');
-const btnNext = document.getElementById('nextSlides');
-const sliderWrap = document.getElementById('slider-wrap');
-
-const listingSliderNext = function listingNext () {
-    if (sliderWrap.style.left == ('-1272px')) {
-        sliderWrap.style.left = 0
-    } else {
-        sliderWrap.style.left = (-1272) + 'px';
-    }
-};
-const listingSliderPrew = function listingPrew () {
-    console.log( sliderWrap.style.left)
-    if (sliderWrap.style.left == '0px'||0 ) {
-        sliderWrap.style.left = (-1272) + 'px';
-    } else {
-         sliderWrap.style.left = 0;
-    }
-};
-
-btnNext.addEventListener('click', listingSliderNext);
-btnPrew.addEventListener('click', listingSliderPrew);
 const arrSliderBlock = ['pandaBlock', 'eagleBlock', 'garillaBlock', 'crocBlock', 'foxBlock', 'slothBlock', 'elefBlock', 'kotiaBlock'];
 const sliderBlock = document.querySelectorAll('.sliderBlock');
 const sliderRangeValue = document.getElementById('sliderRangeValue');
 const sliderRangeOutPut = document.getElementById('sliderRangeOutPut');
-sliderRangeValue.innerHTML = sliderRangeOutPut;
+const btnPrew = document.getElementById('prewSlides');
+const btnNext = document.getElementById('nextSlides');
+const sliderWrap = document.getElementById('slider-wrap');
 
-sliderRangeValue.oninput = function() {
+const changePosItemRigth = function (val) {
+    const arr = [0, 0, 0, 0, -318, -636,- 954, -1272];
+    if (sliderWrap.style.left === '-1272px'|| val ===0) {
+        return sliderWrap.style.left = 0
+    }
+    return sliderWrap.style.left = arr[`${val}`] + 'px';
+};
+
+const changePosItemLeft = function (val) {
+    const arr = [ -1272,0, 0, 0, 0, -318, -636,- 954, -1272];
+    if (sliderWrap.style.left == 0) {
+        return sliderWrap.style.left = '-1272px';
+    }
+    return sliderWrap.style.left = arr[`${val}`] + 'px';
+};
+
+const removeClassTarget = function () {
     sliderBlock.forEach(item => {
         if(item.classList.contains('target')) {
             item.classList.remove('target');
         }
     })
+};
+
+const listingSliderNext = function listingNext () {
+    let index;
+    sliderBlock.forEach(item => {
+        if(item.classList.contains('target')) {
+            index = arrSliderBlock.indexOf(item.id)+1;
+        }
+    });
+    console.log(index);
+    removeClassTarget();
+    let item;
+    let firstItem = document.getElementById('pandaBlock');
+    if(index > 8) {
+        item = firstItem;
+    } else {
+        item = document.getElementById(`${arrSliderBlock[index]}`);
+    };
+
+    if(index === 8) {
+        sliderRangeOutPut.innerHTML = '01/08';
+        sliderRangeValue.value = 1;
+    } else {
+        sliderRangeOutPut.innerHTML = '0' + (index + 1) + '/08';
+        sliderRangeValue.value = index + 1;
+    }
+    
+
+    changePosItemRigth(index);
+    if (item == null) {
+        firstItem.classList.add('target');
+    } else {
+        item.classList.add('target');
+    }
+};
+
+const listingSliderPrew = function listingPrew () {
+    let index;
+    sliderBlock.forEach(item => {
+        if(item.classList.contains('target')) {
+            index = arrSliderBlock.indexOf(item.id);
+        };
+    });
+    console.log(index);
+    removeClassTarget();
+    let item;
+    let lastItem = document.getElementById('kotiaBlock');
+    let firstItem = document.getElementById('pandaBlock');
+    if(index === 0) {
+        item = lastItem;
+        // sliderWrap.style.left = '-1272px'
+    } else {
+        item = document.getElementById(`${arrSliderBlock[index-1]}`);
+    };
+
+    if(index === 0) {
+        sliderRangeOutPut.innerHTML = '08/08';
+        sliderRangeValue.value = 8;
+    } else {
+        sliderRangeOutPut.innerHTML = '0' + (index) + '/08';
+        sliderRangeValue.value = index;
+    };
+    
+
+    changePosItemLeft(index);
+    if (item == null) {
+        lastItem.classList.add('target');
+    } else {
+        item.classList.add('target');
+    };
+};
+
+btnNext.addEventListener('click', listingSliderNext);
+btnPrew.addEventListener('click', listingSliderPrew);
+
+sliderRangeValue.innerHTML = sliderRangeOutPut;
+
+sliderRangeValue.oninput = function() {
+    removeClassTarget();
     let carrent = this.value;
     sliderRangeOutPut.innerHTML = '0' + this.value + '/08' ;
     let item = document.getElementById(`${arrSliderBlock[carrent-1]}`);
