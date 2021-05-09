@@ -13,13 +13,28 @@ checkbox.onclick = function() {
 // Block Slider
 const arrSliderBlock = ['garilla', 'panda', 'croc', 'eagle', 'tigra', 'elef', 'lion', 'zebr'];
 const sliderBlock = document.querySelectorAll(".item");
+const listLocation = document.querySelectorAll(".location");
 const sliderRangeValue = document.getElementById('sliderRangeValue');
 const sliderRangeOutPut = document.getElementById('sliderRangeOutPut');
 const btnPrew = document.getElementById('prewSlides');
 const btnNext = document.getElementById('nextSlides');
 const sliderWrap = document.getElementById('slider');
 
-
+const checkId = function (item) {
+    let str = item.id + 'Loc';
+    let it = document.getElementById(`${str}`);
+    listLocation.forEach(item => {
+        if(item.classList.contains('active')) {
+            item.classList.remove('active');
+        };
+    });
+    if (it != null){
+       it.classList.add('active'); 
+    }
+    
+    
+    console.log(it)
+}
 const removeClassTarget = function () {
     sliderBlock.forEach(item => {
         if(item.classList.contains('target')) {
@@ -46,10 +61,11 @@ const listingSliderNext = function listingNext () {
 
     nextTarget.classList.add('target')
     index = arrSliderBlock.indexOf(`${nextTarget.id}`)
-    console.log(index)
+    console.log(index);
 
         sliderRangeOutPut.innerHTML = '0' + (index + 1) + '/08';
         sliderRangeValue.value = index + 1;
+        checkId(nextTarget);
 
 };
 
@@ -89,3 +105,4 @@ sliderRangeValue.oninput = function() {
     let item = document.getElementById(`${arrSliderBlock[carrent-1]}`);
     item.classList.add('target');
 };
+

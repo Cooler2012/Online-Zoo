@@ -279,6 +279,14 @@ body {
   overflow: hidden;
   margin: 10px;
 }
+.item:hover {
+  transition: 1s;
+  width: 157px;
+  height: 157px;
+}
+.item img {
+  width: 100%;
+}
 
 .target {
   width: 157px;
@@ -309,6 +317,10 @@ body {
     height: 388px;
   }
 }
+.active .ImWrap .mainImg {
+  fill: #EB5757;
+}
+
 .Map {
   width: 1920px;
   display: flex;
@@ -320,27 +332,27 @@ body {
   padding-bottom: 100px;
 }
 
-.Map #LocEagle {
+.Map #eagleLoc {
   position: absolute;
-  top: 307px;
+  top: 130px;
   left: 501px;
 }
 
-.Map #LocCroc {
+.Map #crocLoc {
   position: absolute;
-  top: 332px;
-  left: 616px;
+  top: 160px;
+  left: 620px;
 }
 
-.Map #LocGarilla {
+.Map #garillaLoc {
   position: absolute;
-  top: 419px;
+  top: 245px;
   left: 944px;
 }
 
-.Map #LocPanda {
+.Map #pandaLoc {
   position: absolute;
-  top: 325px;
+  top: 160px;
   left: 1264px;
 }
 
