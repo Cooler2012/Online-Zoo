@@ -76,11 +76,40 @@
                 <div class="main__title">The Beijing Zoo</div>
                 <div class="main__info">
                     <div class="videoBlock">
-                        <iframe width="758" height="400" src="https://www.youtube.com/embed/CLf3VYSKvb8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe width="758" height="400" id="mainVideo" src="https://www.youtube.com/embed/CLf3VYSKvb8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         <div class="moreVideo">
-                            <iframe width="250" height="140" src="https://www.youtube.com/embed/0iI86rNtDo8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            <iframe width="250" height="140" src="https://www.youtube.com/embed/ySRMDsJoIzM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            <iframe width="250" height="140" src="https://www.youtube.com/embed/HFjpDELM_lQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <div class="blockVideo">
+                                <iframe width="250" height="140" class="videoList"  src="https://www.youtube.com/embed/0iI86rNtDo8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <div class="btn"></div>
+                            </div>
+                            <div class="blockVideo">
+                                <iframe width="250" height="140" class="videoList" id="sec" src="https://www.youtube.com/embed/ySRMDsJoIzM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <div class="btn"></div>
+                            </div>
+                            <div class="blockVideo">
+                                <iframe width="250" height="140" class="videoList" id="therd" src="https://www.youtube.com/embed/HFjpDELM_lQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <div class="btn"></div>
+                            </div>
+                            <div class="blockVideo">
+                                <iframe width="250" height="140" class="videoList" src="https://www.youtube.com/embed/CLf3VYSKvb8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <div class="btn"></div>
+                            </div>
+                            <div class="blockVideo">
+                                <iframe width="250" height="140" class="videoList" src="https://www.youtube.com/embed/0iI86rNtDo8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <div class="btn"></div>
+                            </div>
+                            <div class="blockVideo">
+                                <iframe width="250" height="140" class="videoList" src="https://www.youtube.com/embed/ySRMDsJoIzM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <div class="btn"></div>
+                            </div>
+                            <div class="blockVideo">
+                                <iframe width="250" height="140" class="videoList" src="https://www.youtube.com/embed/HFjpDELM_lQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <div class="btn"></div>
+                            </div>
+                            <div class="blockVideo">
+                                <iframe width="250" height="140" class="videoList" src="https://www.youtube.com/embed/CLf3VYSKvb8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <div class="btn"></div>
+                            </div>
                         </div>
                     </div>
                     <div class="infoBlock">
@@ -100,63 +129,61 @@
         </main>
 
         <footer class="footer" id="footer">
-        <div class="foot-wrap-first">
-            <div class="ContactsForm">
-                <div class="logo_footer">
-                    <a href="../../../index.html">
-                        <img src="../../../assets/footerLog.png" alt="Logo">  
-                    </a>
+            <div class="foot-wrap-first">
+                <div class="ContactsForm">
+                    <div class="logo_footer">
+                        <a href="../../../index.html">
+                            <img src="../../../assets/footerLog.png" alt="Logo">  
+                        </a>
+                    </div>
+                    <h3>Contact us</h3>
+                    <input type="text" value="Name" id="inpName">
+                    <input type="email" value="Email" id="inpEmail">
+                    <textarea name="Please enter your message" id="inpMessage" cols="30" rows="10" maxlength="280">Please enter your message</textarea>
+                    <div class="check">
+                        <input type="checkbox" value="Agree" id="ChecPersData">
+                        <label for="Agree">I agree to the processing of Personal Data</label>
+                    </div>
+                    <button type="submit" id="sendForm">
+                        <p>Send</p>
+                        <img src="../../../assets/ArrowSend.svg" alt="Arrow">
+                    </button>
                 </div>
-                <h3>Contact us</h3>
-                <input type="text" value="Name" id="inpName">
-                <input type="email" value="Email" id="inpEmail">
-                <textarea name="Please enter your message" id="inpMessage" cols="30" rows="10" maxlength="280">Please enter your message</textarea>
-                <div class="check">
-                    <input type="checkbox" value="Agree" id="ChecPersData">
-                    <label for="Agree">I agree to the processing of Personal Data</label>
-                </div>
-                <button type="submit" id="sendForm">
-                    <p>Send</p>
-                    <img src="../../../assets/ArrowSend.svg" alt="Arrow">
-                </button>
-            </div>
-            <div class="InfoAboutUs">
-                <nav class="FooterNavi">
-                    <ul class="footer-nav__list">
-                        <li><a href="../../../index.html">About</a></li>
-                        <li><a href="">Zoos</a></li>
-                        <li><a href="../../intermediatePage/index.html">Map</a></li>
-                        <li><a href="https://www.figma.com/file/HKt5Nlx0jghQtJp6jW9q8F/zooApp">Desing</a></li>
-                        <li><a href="#">
-                            <button id="donateVol">
-                                <p>donate for volunteers</p>
-                            </button>
-                        </a></li>
-                    </ul>
-                </nav>
-                <div class="infoAboutZoo">
-                    <p class="info__title">ZOO ONLINE CENTRE</p>
-                    <p class="info__adress">132, Address District, Street</p>
-                    <p class="Info__workTime">Open Daily 10:00 am - 5:00 pm</p>
-                    <a href="callto:+7(702)-163-3433">T(702) 163-3433</a>
-                    <a href="emailto:zoo.online@gmail.com">zoo.online@gmail.com</a>
-                    <div class="social_footer">
-                        <ul class="social__list">
-                            <li class="social__item" id="Inst"><a href=""><img src="../../../assets/icon/instagram.svg" alt="Instagram"></a></li>
-                            <li class="social__item" id="Twit"><a href=""><img src="../../../assets/icon/twit.svg" alt="Twitter"></a></li>
-                            <li class="social__item" id="Youtube"><a href=""><img src="../../../assets/icon/youtube.svg" alt="YouTube"></a></li>
-                            <li class="social__item" id="VK"><a href=""><img src="../../../assets/icon/VK.svg" alt="VK"></a></li>
-                        </ul>   
+                <div class="InfoAboutUs">
+                    <nav class="FooterNavi">
+                        <ul class="footer-nav__list">
+                            <li><a href="../../../index.html">About</a></li>
+                            <li><a href="">Zoos</a></li>
+                            <li><a href="../../intermediatePage/index.html">Map</a></li>
+                            <li><a href="https://www.figma.com/file/HKt5Nlx0jghQtJp6jW9q8F/zooApp">Desing</a></li>
+                            <li><a href="#">
+                                <button id="donateVol">
+                                    <p>donate for volunteers</p>
+                                </button>
+                            </a></li>
+                        </ul>
+                    </nav>
+                    <div class="infoAboutZoo">
+                        <p class="info__title">ZOO ONLINE CENTRE</p>
+                        <p class="info__adress">132, Address District, Street</p>
+                        <p class="Info__workTime">Open Daily 10:00 am - 5:00 pm</p>
+                        <a href="callto:+7(702)-163-3433">T(702) 163-3433</a>
+                        <a href="emailto:zoo.online@gmail.com">zoo.online@gmail.com</a>
+                        <div class="social_footer">
+                            <ul class="social__list">
+                                <li class="social__item" id="Inst"><a href=""><img src="../../../assets/icon/instagram.svg" alt="Instagram"></a></li>
+                                <li class="social__item" id="Twit"><a href=""><img src="../../../assets/icon/twit.svg" alt="Twitter"></a></li>
+                                <li class="social__item" id="Youtube"><a href=""><img src="../../../assets/icon/youtube.svg" alt="YouTube"></a></li>
+                                <li class="social__item" id="VK"><a href=""><img src="../../../assets/icon/VK.svg" alt="VK"></a></li>
+                            </ul>   
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-
-
-        <div class="foot-wrap-sec">
-            <p>©Noora Sagnayeva</p>
-            <p>©RSSchool and ©Yem Digital - 2021</p>
-        </div>
+            <div class="foot-wrap-sec">
+                <p>©Noora Sagnayeva</p>
+                <p>©RSSchool and ©Yem Digital - 2021</p>
+            </div>
         </footer>
     <script src="script.js"></script>
     </body>

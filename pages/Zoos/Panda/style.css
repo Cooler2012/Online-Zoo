@@ -189,6 +189,26 @@ main .main .main__info {
   align-items: center;
   justify-content: center;
 }
+main .main .main__info .videoBlock .moreVideo {
+  display: flex;
+  overflow: hidden;
+  max-width: 758px;
+  max-height: 140px;
+}
+main .main .main__info .videoBlock .moreVideo div {
+  position: relative;
+}
+main .main .main__info .videoBlock .moreVideo div iframe {
+  pointer-events: none;
+}
+main .main .main__info .videoBlock .moreVideo div .btn {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+}
 main .main .main__info .infoBlock {
   width: 450px;
   align-self: flex-start;
